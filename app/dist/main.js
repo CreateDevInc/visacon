@@ -79,7 +79,30 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n__webpack_require__(/*! ../sass/styles.scss */ \"./app/src/sass/styles.scss\");\n\nvar _test = { \"test\": \"hello\" },\n    test = _test.test; // No actual JavaScript should be written in this file,\n// this should only be used to import the other JavaScript\n// files and import the main SCSS file for webpack to bundle it\n\n//# sourceURL=webpack:///./app/src/js/index.js?");
+eval("\n\n__webpack_require__(/*! ./watch.js */ \"./app/src/js/watch.js\");\n\n__webpack_require__(/*! ../sass/styles.scss */ \"./app/src/sass/styles.scss\");\n\n//# sourceURL=webpack:///./app/src/js/index.js?");
+
+/***/ }),
+
+/***/ "./app/src/js/watch.js":
+/*!*****************************!*\
+  !*** ./app/src/js/watch.js ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\n__webpack_require__(/*! ../pug/index.pug */ \"./app/src/pug/index.pug\");\n\n//# sourceURL=webpack:///./app/src/js/watch.js?");
+
+/***/ }),
+
+/***/ "./app/src/pug/index.pug":
+/*!*******************************!*\
+  !*** ./app/src/pug/index.pug ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"extends templates/base\\r\\n\\r\\nblock content\\r\\n  h1 brad is a studly muffin\"\n\n//# sourceURL=webpack:///./app/src/pug/index.pug?");
 
 /***/ }),
 

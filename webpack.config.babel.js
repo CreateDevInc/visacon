@@ -1,4 +1,6 @@
 const path = require('path');
+const WebpackOnBuildPlugin = require('on-build-webpack');
+const shell = require('shelljs');
 
 module.exports = {
   mode: "development",
@@ -23,7 +25,18 @@ module.exports = {
           { loader: "css-loader"   },
           { loader: "sass-loader"  }
         ]
+      },
+      {
+        test: /\.pug$/,
+        use: {
+          loader: "raw-loader"
+        }
       }
     ]
-  }
+  },
+  plugins: [
+    new WebpackOnBuildPlugin(stats => {
+      shell.exec('npm run views');
+    })
+  ]
 };

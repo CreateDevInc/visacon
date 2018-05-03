@@ -1,24 +1,28 @@
 html
   head
     title Cool Product
+    link(rel="stylesheet", href="styles.css")
   body
     include ../components/header
 
-    div.image-slider
-      i.fa.fa-arrow-left
-      i.fa.fa-arrow-right
-      div.images
+    .image-slider
+      i
+      i
+      div
         block image-slider
 
-    div.description
+    .description
       block description
 
-    div.information
+    .information
       table
         tr
           th Physical Property
           th Units
           th Values
         block table
+
+    .features-benefits
+      block features-benefits
 
     include ../components/footer

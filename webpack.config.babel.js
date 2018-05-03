@@ -1,13 +1,17 @@
 const path = require('path');
 const WebpackOnBuildPlugin = require('on-build-webpack');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const shell = require('shelljs');
 
 module.exports = {
   mode: "development",
-  entry: "./app/src/js/index.js",
+  entry: {
+    main: "./app/src/js/index.js",
+    styles: "./app/src/sass/styles.scss"
+  },
   output: {
     path: path.resolve(__dirname, "app/dist"),
-    filename: "main.js"
+    filename: "[name].js"
   },
   module: {
     rules: [
@@ -20,11 +24,18 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: [
-          { loader: "style-loader" },
-          { loader: "css-loader"   },
-          { loader: "sass-loader"  }
-        ]
+        // use: [
+        //   { loader: "style-loader" },
+        //   { loader: "css-loader"   },
+        //   { loader: "sass-loader"  }
+        // ]
+        use: ExtractTextPlugin.extract({
+          fallback: "style-loader",
+          use: [
+            { loader: "css-loader"   },
+            { loader: "sass-loader"  }
+          ]
+        })
       },
       {
         test: /\.pug$/,
@@ -37,6 +48,7 @@ module.exports = {
   plugins: [
     new WebpackOnBuildPlugin(stats => {
       shell.exec('npm run views');
-    })
+    }),
+    new ExtractTextPlugin("styles.css")
   ]
 };

@@ -3,6 +3,18 @@
 // only found on a specific page, it should be
 // put in a file that is associated with that page
 
-body {
-  background-color: blue;
+@import 'variables';
+@import 'mixins';
+
+.image-slider {
+  width: 300px;
+  height: 500px;
+  background-color: red;
+
+  @include screen-size(sm) {
+    background-color: orange;
+  }
+  @include screen-size(med) {
+    background-color: green;
+  }
 }

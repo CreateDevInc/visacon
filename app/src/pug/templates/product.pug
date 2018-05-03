@@ -1,0 +1,24 @@
+html
+  head
+    title Cool Product
+  body
+    include ../components/header
+
+    div.image-slider
+      i.fa.fa-arrow-left
+      i.fa.fa-arrow-right
+      div.images
+        block image-slider
+
+    div.description
+      block description
+
+    div.information
+      table
+        tr
+          th Physical Property
+          th Units
+          th Values
+        block table
+
+    include ../components/footer

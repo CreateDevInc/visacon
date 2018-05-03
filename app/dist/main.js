@@ -102,7 +102,7 @@ eval("\n\n__webpack_require__(/*! ../pug/index.pug */ \"./app/src/pug/index.pug\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = \"extends templates/base\\r\\n\\r\\nblock content\\r\\n  h1 brad is a studly muffin\"\n\n//# sourceURL=webpack:///./app/src/pug/index.pug?");
+eval("module.exports = \"extends templates/base\\r\\n\\r\\nblock content\\r\\n  extends templates/base\\r\\n\\r\\n  block content\\r\\n    h1 brad is a studly muffins\"\n\n//# sourceURL=webpack:///./app/src/pug/index.pug?");
 
 /***/ }),
 

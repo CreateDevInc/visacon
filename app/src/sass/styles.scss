@@ -2,19 +2,78 @@
 // global to the entire site. If a given style is
 // only found on a specific page, it should be
 // put in a file that is associated with that page
-
 @import 'variables';
 @import 'mixins';
+* {
+    margin: 0;
+    font-family: $main-font; //just for testing
+}
 
 .image-slider {
-  width: 300px;
-  height: 500px;
-  background-color: red;
+    width: 300px;
+    height: 300px;
+    background-color: red;
+    @include screen-size(sm) {
+        background-color: orange;
+    }
+    @include screen-size(med) {
+        background-color: green;
+    }
+}
 
-  @include screen-size(sm) {
-    background-color: orange;
-  }
-  @include screen-size(med) {
-    background-color: green;
-  }
+footer {
+    h5 {
+        font-size: $headings;
+    }
+    .foot-background {
+        background-color: $foot-info;
+        .foot-info {
+            display: flex;
+            justify-content: flex-start;
+            padding: 10px;
+            .foot-products {
+                max-width: 250px;
+                li {
+                    list-style: none;
+                    a {
+                        text-decoration: none;
+                        color: $copy-background;
+                        font-size: $normal;
+                        font-weight: normal;
+                    }
+                }
+            }
+            .foot-contact {
+                max-width: 250px;
+                font-size: $normal;
+                padding: 20px 60px;
+                p {
+                    color: $copy-background;
+                }
+                a {
+                    display: block;
+                    margin: auto;
+                    position: relative; // Is this the best way to do things?? I feel like there is probably some flexbox magic that I don't know here....
+                    top: 13px; // I'm trying to push the blue button down from the paragraph above it
+                    padding: 5px 0;
+                    width: 150px;
+                    text-align: center;
+                    border-radius: 1px;
+                    background-color: $foot-message-btn;
+                    color: white;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    .copyright {
+        width: 100%;
+        background-color: $copy-background;
+        text-align: right;
+        color: white;
+        h5 {
+            font-weight: normal;
+            padding: 7px 25px 7px 0;
+        }
+    }
 }

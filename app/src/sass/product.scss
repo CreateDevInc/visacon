@@ -1,0 +1,103 @@
+    //This scss is for the product template pages NOT the specific products.
+    body {
+        h1 {
+            font-size: $big-headings;
+        }
+        .content {
+            margin-top: 50px;
+            display: flex;
+            justify-content: flex-start;
+            padding: 5px;
+            .text {
+                width: 55%;
+                .description {
+                    div {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                    a {
+                        text-decoration: underline;
+                        color: $foot-message-btn;
+                        padding: 20px 0;
+                        cursor: pointer;
+                        transition-duration: 300ms;
+                    }
+                    a:hover {
+                        color: $link-hover;
+                    }
+                    p {
+                        line-height: 1.5;
+                        color: $copy-background;
+                    }
+                }
+                .information {
+                    table {
+                        width: 100%;
+                        border-collapse: collapse;
+                    }
+                    td {
+                        color: $copy-background;
+                        padding: 8px 5px;
+                    }
+                    tr:nth-child(even) {
+                        background-color: $foot-info;
+                    }
+                }
+                .description,
+                .information {
+                    padding: 5px;
+                }
+            }
+            .image-slider {
+                width: 45%;
+                height: 100%;
+                background-color: $foot-info;
+                @include screen-size(sm) {
+                    background-color: orange; //testing
+                }
+                @include screen-size(med) {
+                    background-color: green; //testing
+                }
+            }
+        }
+        .features-benefits {
+            padding: 10px;
+            margin-bottom: 40px;
+            h2 {
+                font-size: $med-big;
+            }
+            >div {
+                display: flex;
+                justify-content: flex-start;
+            }
+            .left {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                >div {
+                    padding: 10px;
+                }
+            }
+            .right {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                >div {
+                    padding: 10px;
+                }
+            }
+            ul {
+                list-style-type: none;
+                padding-left: 20px;
+                li:before {
+                    content: '- ';
+                }
+                li {
+                    color: $copy-background;
+                    font-size: $normal;
+                }
+            }
+        }
+    }

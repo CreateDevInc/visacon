@@ -4,10 +4,10 @@
             font-size: $big-headings;
         }
         .content {
-            margin-top: 50px;
-            display: flex;
-            justify-content: flex-start;
             padding: 5px;
+            display: flex;
+            margin-top: 50px;
+            justify-content: flex-start;
             .text {
                 width: 55%;
                 .description {
@@ -16,18 +16,18 @@
                         justify-content: space-between;
                     }
                     a {
-                        text-decoration: underline;
                         color: $foot-message-btn;
-                        padding: 20px 0;
                         cursor: pointer;
+                        padding: 20px 0;
+                        text-decoration: underline;
                         transition-duration: 300ms;
                     }
                     a:hover {
                         color: $link-hover;
                     }
                     p {
-                        line-height: 1.5;
                         color: $copy-background;
+                        line-height: 1.5;
                     }
                 }
                 .information {
@@ -89,8 +89,8 @@
                 }
             }
             ul {
-                list-style-type: none;
                 padding-left: 20px;
+                list-style-type: none;
                 li:before {
                     content: '- ';
                 }

@@ -1,0 +1,32 @@
+//This file contains all styles for the header 
+header {
+    nav {
+        text-align: right;
+        display: flex;
+        justify-content: space-between;
+        div {
+            img {
+                height: 50px;
+            }
+        }
+        .links {
+            ul {
+                padding: 0 27px 0 0;
+                li {
+                    list-style: none;
+                    display: inline;
+                    a {
+                        display: inline-block;
+                        padding: 16px 27px;
+                        text-decoration: none;
+                        color: black;
+                        transition-duration: 300ms;
+                    }
+                    a:hover {
+                        color: $foot-message-btn;
+                    }
+                }
+            }
+        }
+    }
+}

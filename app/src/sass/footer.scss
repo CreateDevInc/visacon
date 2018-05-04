@@ -1,0 +1,57 @@
+//This file contains all styles for the footer elements
+footer {
+    h5 {
+        font-size: $headings;
+    }
+    .foot-background {
+        background-color: $foot-info;
+        .foot-info {
+            display: flex;
+            padding: 10px;
+            justify-content: flex-start;
+            .foot-products {
+                max-width: 250px;
+                li {
+                    list-style: none;
+                    a {
+                        color: $copy-background;
+                        font-size: $normal;
+                        font-weight: normal;
+                        text-decoration: none;
+                    }
+                }
+            }
+            .foot-contact {
+                padding: 20px 60px;
+                max-width: 250px;
+                font-size: $normal;
+                p {
+                    color: $copy-background;
+                }
+                a {
+                    margin: auto;
+                    display: block;
+                    position: relative; // Is this the best way to do things?? I feel like there is probably some flexbox magic that I don't know here....
+                    top: 13px; // I'm trying to push the blue button down from the paragraph above it
+                    width: 150px;
+                    color: white;
+                    padding: 5px 0;
+                    text-align: center;
+                    border-radius: 1px;
+                    text-decoration: none;
+                    background-color: $foot-message-btn;
+                }
+            }
+        }
+    }
+    .copyright {
+        width: 100%;
+        background-color: $copy-background;
+        text-align: right;
+        color: white;
+        h5 {
+            font-weight: normal;
+            padding: 7px 25px 7px 0;
+        }
+    }
+}

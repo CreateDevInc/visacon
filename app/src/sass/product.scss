@@ -8,13 +8,35 @@
             display: flex;
             margin-top: 50px;
             justify-content: flex-start;
+
+            $content-margins: 2.5%;
+            $content-width: 100% - ($content-margins * 2);
+
+            @mixin content-item() {
+                width: $content-width;
+                margin-left: $content-margins;
+                margin-right: $content-margins;
+            }
+
             .text {
-                width: 55%;
+                width: 50%;
+
                 .description {
+
                     div {
                         display: flex;
                         justify-content: space-between;
                     }
+
+                    p {
+                        color: $copy-background;
+                        line-height: 1.5;
+                    }
+
+                    p, h1, div {
+                        @include content-item();
+                    }
+                    
                     a {
                         color: $foot-message-btn;
                         cursor: pointer;
@@ -22,23 +44,23 @@
                         text-decoration: underline;
                         transition-duration: 300ms;
                     }
+
                     a:hover {
                         color: $link-hover;
-                    }
-                    p {
-                        color: $copy-background;
-                        line-height: 1.5;
                     }
                 }
                 .information {
                     table {
                         width: 100%;
                         border-collapse: collapse;
+                        @include content-item();
                     }
+
                     td {
                         color: $copy-background;
                         padding: 8px 5px;
                     }
+
                     tr:nth-child(even) {
                         background-color: $foot-info;
                     }
@@ -49,9 +71,10 @@
                 }
             }
             .image-slider {
-                width: 45%;
+                width: 50%;
                 height: 100%;
                 background-color: $foot-info;
+
                 @include screen-size(sm) {
                     background-color: orange; //testing
                 }
@@ -63,37 +86,35 @@
         .features-benefits {
             padding: 10px;
             margin-bottom: 40px;
+
             h2 {
                 font-size: $med-big;
             }
-            >div {
+
+            > div {
                 display: flex;
                 justify-content: flex-start;
             }
-            .left {
-                width: 50%;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-                >div {
-                    padding: 10px;
-                }
-            }
+
+            .left,
             .right {
                 width: 50%;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
-                >div {
+                > div {
                     padding: 10px;
                 }
             }
+
             ul {
                 padding-left: 20px;
                 list-style-type: none;
+
                 li:before {
                     content: '- ';
                 }
+
                 li {
                     color: $copy-background;
                     font-size: $normal;

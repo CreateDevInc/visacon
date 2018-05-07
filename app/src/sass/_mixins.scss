@@ -1,7 +1,10 @@
 @import 'variables';
 
 @mixin screen-size($media) {
-  @if $media == sm {
+  @if $media == mobile {
+    @media only screen and (max-width: $break-mobile) { @content; }
+  }
+  @else if $media == sm {
     @media only screen and (max-width: $break-s) { @content; }
   }
   @else if $media == med {

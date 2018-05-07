@@ -5,30 +5,31 @@ html
   body
     include ../components/header
 
-    
+    #wrapper
 
-    .content
-      .text
-        .description
-          block description
+      .content
+        .text
+          .description
+            block description
 
-        .information
-          table
-            tr
-              th Physical Property
-              th Units
-              th Values
-            block table
+          .information
+            table
+              tr
+                th Physical Property
+                th Units
+                th Values
+              block table
 
-      .image-slider
-        i
-        i
+        .image-slider
+          i
+          i
+          div
+            block image-slider
+      
+
+      .features-benefits
         div
-          block image-slider
-    
-
-    .features-benefits
-      h1 Features &amp Benefits
-      block features-benefits
+          h1 Features &amp Benefits
+          block features-benefits
 
     include ../components/footer

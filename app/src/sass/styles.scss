@@ -11,3 +11,8 @@
     margin: 0;
     font-family: $main-font; //just for testing
 }
+
+#wrapper {
+    margin: auto;
+    max-width: $max-content-width;
+}

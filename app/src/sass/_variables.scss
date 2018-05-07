@@ -1,18 +1,25 @@
 $break-s: 300px;
 $break-m: 800px;
 $break-l: 1200px;
-//Colors
+
+// General
+$break-mobile: 1080px;
+$max-content-width: 1400px;
+
+// Colors
 $foot-info:#e6e6e6;
 $btn-hover:#38bcf3;
 $link-hover: #284f5f;
 $copy-background: #666666;
 $foot-message-btn: #009cdc;
-//Font sizes
+
+// Font sizes
 $normal: 14px;
 $med-big: 16px;
 $headings: 18px;
 $big-headings: 22px;
-//Font-Families
+
+// Font-Families
 $main-font: Roboto,
 RobotoDraft,
 Helvetica,

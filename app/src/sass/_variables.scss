@@ -1,30 +1,26 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
-
 // Font-Families
-$body-font: 'Open Sans', Arial, serif;
-$header-font: 'Montserrat', Arial, sans-serif;
-
+$body-font: 'Open Sans',
+Arial,
+serif;
+$header-font: 'Montserrat',
+Arial,
+sans-serif;
 $break-s: 300px;
 $break-m: 800px;
 $break-l: 1200px;
-
 // General
 $break-mobile: 1080px;
 $max-content-width: 1400px;
-
 // Colors
 $logo-blue: #009cdc;
-
 $foot-info:#e6e6e6;
 $btn-hover:#38bcf3;
 $link-hover: #284f5f;
 $copy-background: #666666;
-
-
 // Font sizes
 $normal: 14px;
 $med-big: 16px;
 $headings: 18px;
 $big-headings: 22px;
-

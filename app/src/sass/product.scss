@@ -71,6 +71,9 @@ body {
                 }
             }
             .information {
+                .active-table {
+                    pointer-events: none;
+                }
                 .switch {
                     text-align: right;
                     margin-right: 2.5%;

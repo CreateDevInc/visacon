@@ -14,3 +14,15 @@
     @media only screen and (min-width: $break-l) { @content; }
   }
 }
+
+@mixin vertical-flex-center() {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@mixin transition($duration: .5s, $type: all) {
+  -webkit-transition: $type $duration;
+  -moz-transition: $type $duration;
+  transition: $type $duration;
+}

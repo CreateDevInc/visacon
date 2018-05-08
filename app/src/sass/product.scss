@@ -75,7 +75,7 @@ body {
                 }
                 
                 a {
-                    color: $foot-message-btn;
+                    color: $logo-blue;
                     cursor: pointer;
                     padding: ($standard-spacing / 2) 0;
                     text-decoration: underline;
@@ -105,16 +105,6 @@ body {
                 tr:nth-child(even) {
                     background-color: $foot-info;
                 }
-            }
-        }
-        .image-slider {
-            background-color: $foot-info;
-
-            @include screen-size(sm) {
-                background-color: orange; //testing
-            }
-            @include screen-size(med) {
-                background-color: green; //testing
             }
         }
     }

@@ -1,23 +1,17 @@
-
 //This scss is for the product template pages NOT the specific products.
-
 $standard-spacing: 15px;
-
 $content-margins: 2.5%;
 $content-desktop-width: 100% - ($content-margins * 2);
 $content-mobile-max-width: 750px;
-
 // This mixin gives normalized spacing to every content
 // item that it is applied to according to the column layout
 // the content item resides within
 @mixin content-item($column: 2) {
     width: $content-desktop-width;
     margin-bottom: $standard-spacing;
-
-    @if $column == 1 {
+    @if $column==1 {
         margin-left: $content-margins / 2;
         margin-right: $content-margins / 2;
-
         @include screen-size(mobile) {
             margin-left: $content-margins * 2;
             margin-right: $content-margins * 2;
@@ -27,53 +21,44 @@ $content-mobile-max-width: 750px;
         margin-left: $content-margins;
         margin-right: $content-margins;
     }
-}    
+}
 
 // For page elements that should flex their content on desktop,
 // but shouldn't on mobile
 @mixin desktop-flex-row() {
     display: flex;
-
-    > * {
+    >* {
         width: 50%;
     }
-
     @include screen-size(mobile) {
         display: block;
-
-        > * {
+        >* {
             width: 100%;
             margin: auto;
             max-width: $content-mobile-max-width;
         }
     }
 }
-    
+
 body {
     h1 {
         font-size: $big-headings;
     }
-
     .content {
         @include desktop-flex-row();
-
         margin-top: 50px;
         justify-content: flex-start;
-
         .text {
             .description {
                 @include content-item();
-
                 div {
                     display: flex;
                     justify-content: space-between;
                 }
-
                 p {
                     color: $copy-background;
                     line-height: 1.5;
                 }
-                
                 a {
                     color: $logo-blue;
                     cursor: pointer;
@@ -81,27 +66,30 @@ body {
                     text-decoration: underline;
                     transition-duration: 300ms;
                 }
-
                 a:hover {
                     color: $link-hover;
                 }
             }
-
             .information {
+                .switch {
+                    text-align: right;
+                    margin-right: 2.5%;
+                    p {
+                        display: inline;
+                        cursor: pointer;
+                    }
+                }
                 table {
                     @include content-item();
                     border-collapse: collapse;
                 }
-
                 th {
                     text-align: left;
                 }
-
                 td {
                     color: $copy-background;
                     padding: 8px 5px;
                 }
-
                 tr:nth-child(even) {
                     background-color: $foot-info;
                 }
@@ -112,8 +100,7 @@ body {
         @include content-item(1);
         margin-top: $standard-spacing * 2;
         margin-bottom: $standard-spacing * 2;
-
-        > div {
+        >div {
             @include screen-size(mobile) {
                 width: 100%;
                 margin: auto;
@@ -121,50 +108,60 @@ body {
                 margin-top: $standard-spacing * 2;
             }
         }
-
-        > div > div {
+        >div>div {
             display: flex;
-
             @include screen-size(mobile) {
                 display: block;
             }
         }
-
         h2 {
             font-size: $med-big;
             margin-top: $standard-spacing;
         }
-
-        .left, .right {
+        .left,
+        .right {
             width: 50%;
-
             @include screen-size(mobile) {
                 width: auto;
             }
         }
-
         .right {
             margin-left: $content-margins;
-
             @include screen-size(mobile) {
                 margin-left: 0;
             }
         }
-
         ul {
             padding-top: 3px;
             padding-left: 20px;
             margin-bottom: $standard-spacing / 2;
             list-style-type: none;
-
             li:before {
                 content: '- ';
             }
-
             li {
                 color: $copy-background;
                 font-size: $normal;
             }
         }
     }
+}
+
+.hidden {
+    display: none;
+}
+
+.active-table {
+    text-decoration: none;
+    color: black;
+}
+
+.switchable {
+    text-decoration: underline;
+    color: $logo-blue;
+    transition-duration: 300ms;
+}
+
+.switchable:hover {
+    color: $link-hover;
 }

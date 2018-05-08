@@ -5,3 +5,4 @@
 import './watch';
 import './product-slider';
 import '../sass/styles.scss';
+import './switch'

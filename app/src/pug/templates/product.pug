@@ -1,13 +1,11 @@
 html
   head
     block product-title
-    link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.0.12/css/all.css', integrity='sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9', crossorigin='anonymous')
-    link(rel="stylesheet", href="styles.css")
+    include ../components/head
   body
     include ../components/header
 
     #wrapper
-
       .content
         .text
           .description
@@ -19,8 +17,6 @@ html
               p  | 
               p(id="metric") Metric
             block table
-            
-              
 
         .image-slider
           .control-container
@@ -30,7 +26,6 @@ html
             .dots
           .images
             block image-slider
-      
 
       .features-benefits
         div

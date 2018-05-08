@@ -1,33 +1,74 @@
+@import 'variables';
 //This file contains all styles for the header 
 header {
     nav {
-        text-align: right;
         display: flex;
+        text-align: right;
         justify-content: space-between;
         background-color: $logo-blue;
-        div {
-            img {
-                height: 40px;
-                padding: 17.5px 20px 17.5px 30px;
-            }
+        div img {
+            height: 40px;
+            padding: 17.5px 20px 17.5px 30px;
         }
         .links {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
             ul {
                 padding: 0 27px 0 0;
-                li {
-                    list-style: none;
-                    display: inline;
-                    a {
-                        display: inline-block;
-                        padding: 26px 27px;
-                        text-decoration: none;
-                        color: white;
-                        transition-duration: 300ms;
-                    }
-                    a:hover {
+                display: flex;
+                justify-content: center;
+            }
+            li {
+                display: inline;
+                list-style: none;
+                a,
+                span {
+                    color: white;
+                    cursor: pointer;
+                    display: block;
+                    padding: 25px;
+                    text-decoration: none;
+                    transition-duration: 300ms;
+                    &:hover {
                         color: black;
                     }
                 }
+            }
+        }
+        .dropdown {
+            overflow: hidden; // this is the container for the hidden
+            // product links
+            >div {
+                @include transition(.8s, opacity);
+                opacity: 0;
+                z-index: 10;
+                position: absolute;
+                min-width: 200px;
+                text-align: left;
+                box-sizing: border-box;
+                pointer-events: none;
+                background-color: #fff;
+
+                border: 3px solid $logo-blue;
+                border-top: none;
+
+                >a {
+                    color: $logo-blue;
+                    display: block;
+                    padding: 10px !important;
+                    border-bottom: 1px solid $logo-blue;
+                }
+                >a:last-child {
+                    border-bottom: none;
+                }
+            }
+            &:hover>div {
+                opacity: 1;
+                pointer-events: all;
+            }
+            i {
+                margin-left: 5px;
             }
         }
     }

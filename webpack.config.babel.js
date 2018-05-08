@@ -24,30 +24,36 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        // use: [
-        //   { loader: "style-loader" },
-        //   { loader: "css-loader"   },
-        //   { loader: "sass-loader"  }
-        // ]
-        use: ExtractTextPlugin.extract({
-          fallback: "style-loader",
-          use: [
-            { loader: "css-loader"   },
-            { loader: "sass-loader"  }
-          ]
-        })
+        use: [
+          { loader: "style-loader" },
+          { loader: "css-loader"   },
+          { loader: "sass-loader"  }
+        ]
+        // use: ExtractTextPlugin.extract({
+        //   fallback: "style-loader",
+        //   use: [
+        //     { loader: "css-loader"   },
+        //     { loader: "sass-loader"  }
+        //   ]
+        // })
       },
       {
         test: /\.pug$/,
         use: {
           loader: "raw-loader"
         }
-      }
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [
+            'file-loader'
+          ]
+       }
     ]
   },
   plugins: [
     new WebpackOnBuildPlugin(stats => {
-      shell.exec('npm run views');
+      shell.exec('npm run gulp');
     }),
     new ExtractTextPlugin("styles.css")
   ]

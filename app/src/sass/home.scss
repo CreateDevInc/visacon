@@ -33,6 +33,11 @@ main {
         text-decoration: none;
         margin: 15px;
     }
+    a:hover {
+        h2 {
+            background-color: $btn-hover;
+        }
+    }
     div {
         width: 200px;
         height: 250px;
@@ -50,6 +55,7 @@ main {
             padding: 8px;
             color: white;
             font-size: $small;
+            transition-duration: 300ms;
         }
     }
 }

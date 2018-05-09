@@ -2,16 +2,16 @@
 .hero-image {
     height: 275px;
     padding: 15px;
-    background-color: rgb(112, 112, 168);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    background-color: rgb(112, 112, 168);
     a {
         width: 150px;
-        padding: 15px;
-        background-color: $logo-blue;
-        text-decoration: none;
         color: white;
+        padding: 15px;
+        text-decoration: none;
+        background-color: $logo-blue;
     }
     h1,
     p {
@@ -26,12 +26,12 @@
 }
 
 main {
+    padding: 50px;
     display: flex;
     justify-content: space-around;
-    padding: 50px;
     a {
-        text-decoration: none;
         margin: 15px;
+        text-decoration: none;
     }
     a:hover {
         h2 {
@@ -41,20 +41,20 @@ main {
     div {
         width: 200px;
         height: 250px;
-        background-color: #c2c2c2;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        background-color: #c2c2c2;
         p {
             color: white;
-            font-size: $normal;
             padding: 8px;
+            font-size: $normal;
         }
         h2 {
-            background-color: $logo-blue;
-            padding: 8px;
             color: white;
+            padding: 8px;
             font-size: $small;
+            background-color: $logo-blue;
             transition-duration: 300ms;
         }
     }

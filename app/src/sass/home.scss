@@ -1,0 +1,55 @@
+//styles for the home page
+.hero-image {
+    height: 275px;
+    padding: 15px;
+    background-color: rgb(112, 112, 168);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    a {
+        width: 150px;
+        padding: 15px;
+        background-color: $logo-blue;
+        text-decoration: none;
+        color: white;
+    }
+    h1,
+    p {
+        color: white;
+    }
+    h1 {
+        font-size: $huge-headings;
+    }
+    p {
+        font-size: $big-headings;
+    }
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    a {
+        text-decoration: none;
+        margin: 15px;
+    }
+    div {
+        width: 200px;
+        height: 250px;
+        background-color: #c2c2c2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        p {
+            color: white;
+            font-size: $normal;
+            padding: 8px;
+        }
+        h2 {
+            background-color: $logo-blue;
+            padding: 8px;
+            color: white;
+            font-size: $small;
+        }
+    }
+}

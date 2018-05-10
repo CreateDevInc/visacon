@@ -40,4 +40,6 @@ h5 {
 #wrapper {
     margin: auto;
     max-width: $max-content-width;
+    margin-top: $header-height;
+    padding-top: 10px;
 }

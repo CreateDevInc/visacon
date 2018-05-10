@@ -7,7 +7,8 @@
     "dev": "webpack --watch",
     "views": "gulp pug",
     "images": "gulp images",
-    "gulp": "gulp"
+    "gulp": "gulp",
+    "deploy-test" : "surge app/dist intelligent-oatmeal.surge.sh"
   },
   "keywords": [],
   "author": "",

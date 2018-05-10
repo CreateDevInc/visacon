@@ -26,6 +26,15 @@ header {
                 margin-right: 0;
             }
 
+            @include screen-size(sm) {
+                & {
+                    margin-right: 10px;
+                }
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+
             a {
                 display: block;
                 img {

@@ -1,6 +1,14 @@
 const pug = require('gulp-pug');
 const gulp = require('gulp');
 const clean = require('gulp-clean');
+const surge = require('surge');
+
+gulp.task('deploy:test', [], function () {
+  return surge({
+    project: './app/dist',         // Path to your static build directory
+    domain: 'cryometrixischill.surge.sh'  // Your domain or Surge subdomain
+  })
+})
  
 gulp.task('pug', function buildHTML() {
   return gulp.src('./app/src/pug/*.pug')

@@ -6,4 +6,4 @@ import '../pug/product-t90.pug';
 import '../pug/templates/product.pug';
 import '../pug/components/footer.pug';
 import '../pug/components/header.pug';
-import '../pug/home.pug';
+import '../pug/index.pug';

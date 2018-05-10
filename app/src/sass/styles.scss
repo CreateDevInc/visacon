@@ -8,25 +8,32 @@
 @import 'header';
 @import 'product';
 @import 'product-slider';
-
+@import 'home';
 * {
     margin: 0;
-    font-family: $body-font; 
+    font-family: $body-font;
 }
 
 sup {
     font-size: 12px;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
     font-family: $header-font;
 }
 
-h1, h2 {
+h1,
+h2 {
     font-weight: 700;
 }
 
-h3, h4, h5 {
+h3,
+h4,
+h5 {
     font-weight: 400;
 }
 

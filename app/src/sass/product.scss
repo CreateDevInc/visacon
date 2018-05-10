@@ -89,8 +89,10 @@ body {
                     pointer-events: none;
                 }
                 .switch {
-                    text-align: right;
-                    margin-right: 2.5%;
+                    text-align: left;
+                    margin-left: 2.5%;
+                    margin-top: 20px;
+                    padding-bottom: 10px;
                     p {
                         display: inline;
                         cursor: pointer;
@@ -181,4 +183,28 @@ body {
 
 .switchable:hover {
     color: $link-hover;
+}
+
+// Mobile styles are really messed up right now for some reason;
+// putting them down there
+@include screen-size(mobile) {
+    // .information {
+    //     margin-bottom: 60px;
+    // }
+    // body .features-benefits h2 {
+    //     margin-top: 45px;
+    // }
+
+    // body .content .text .description a {
+    //     margin: 20px 0;
+    // }
+    // body .content .text .information .switch {
+    //     margin-top: 60px;
+    //     margin-bottom: 25px;
+    // }
+    // body .content .text .description a,
+    // body .content .text .information th,
+    // body .content .text .information td {
+    //     font-size: 40px;
+    // }
 }

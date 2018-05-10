@@ -4,21 +4,31 @@ footer {
         font-size: $headings;
     }
     .foot-background {
+        height: 250px;
         background-color: $foot-info;
-        padding: 15px;
+        // padding: 15px;
         .foot-info {
             display: flex;
-            padding: 10px;
+            // padding: 10px;
             justify-content: flex-start;
+
+            @include screen-size(sm) {
+                justify-content: space-around;
+            }
+
             .foot-products {
                 max-width: 250px;
+                ul {
+                    padding-left: 0;
+                }
                 li {
                     list-style: none;
                     a {
-                        color: $copy-background;
+                        display: block;
+                        padding: 5px;
+                        color: $logo-blue;
                         font-size: $normal;
                         font-weight: normal;
-                        text-decoration: none;
                         transition-duration: 300ms;
                     }
                     a:hover {
@@ -26,20 +36,25 @@ footer {
                     }
                 }
             }
+
+
+
             .foot-contact {
-                padding: 20px 60px;
+                width: 100%;
                 max-width: 250px;
+                // padding: 20px 60px;
+                // max-width: 250px;
                 font-size: $normal;
                 p {
                     color: $copy-background;
                 }
                 a {
-                    margin: auto;
+                    margin: 15px auto;
                     display: block;
-                    position: relative; // Is this the best way to do things?? I feel like there is probably some flexbox magic that I don't know here....
-                    top: 13px; // I'm trying to push the blue button down from the paragraph above it
+                    // position: relative; // Is this the best way to do things?? I feel like there is probably some flexbox magic that I don't know here....
+                    // top: 13px; // I'm trying to push the blue button down from the paragraph above it
                     color: white;
-                    padding: 5px 0;
+                    padding: 8px 0;
                     text-align: center;
                     border-radius: 1px;
                     text-decoration: none;
@@ -48,6 +63,24 @@ footer {
                 }
                 a:hover {
                     background-color: $btn-hover;
+                }
+            }
+            .foot-contact,
+            .foot-products {
+                height: 100%;
+                display: flex;
+                margin-left: 30px;
+                flex-direction: column;
+                justify-content: center;
+
+                @include screen-size(sm) {
+                    padding: 5px;
+                    max-width: 50%;
+                    margin-left: 0px;
+
+                    a, li > a, p {
+                        font-size: 14px;
+                    }
                 }
             }
         }
@@ -59,7 +92,7 @@ footer {
         color: white;
         h5 {
             font-weight: normal;
-            padding: 7px 25px 7px 0;
+            // padding: 7px 25px 7px 0;
         }
     }
 }

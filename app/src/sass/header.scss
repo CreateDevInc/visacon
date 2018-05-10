@@ -67,7 +67,6 @@ header {
                 opacity: 0;
                 z-index: 10;
                 position: absolute;
-                min-width: 200px;
                 text-align: left;
                 box-sizing: border-box;
                 pointer-events: none;
@@ -93,6 +92,117 @@ header {
             i {
                 margin-left: 5px;
             }
+        }
+    }
+}
+
+// Mobile nav stuff (separated out just to 
+// keep things easier to keep track of)
+nav {
+    .mobile-nav {
+        cursor: pointer;
+        display: none;
+        font-size: $huge-headings;
+        a, i {
+            color: #fff;
+        }
+    }
+
+    .mobile-nav > a { display: block; }
+
+    .mobile-nav ul,
+    .mobile-nav .overlay,
+    .mobile-nav .mobile-container {
+        opacity: 0;
+        pointer-events: none;
+        @include transition(.7s, opacity);
+    }
+    .mobile-nav:target ul, 
+    .mobile-nav:target .overlay,
+    .mobile-nav:target .mobile-container {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .overlay,
+    .mobile-container {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: fixed;
+        background-color: #fff;
+    }
+
+    .mobile-nav .overlay {
+        z-index: 998;
+        background-color: #fff;
+    }
+
+    .mobile-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .mobile-nav ul {
+        position: relative;
+        z-index: 999;
+        opacity: 0;
+        pointer-events: none;
+        max-width: 400px;
+        margin: auto;
+        text-align: left;
+        list-style: none;
+        padding: 0;
+
+        .nav-item {
+            color: $logo-blue;
+            padding: 25px;
+            background-color: #fff;
+            text-decoration: none;
+        }
+
+        $link-border-radius: 0px;
+
+        li:first-child .nav-item {
+            border-top-left-radius: $link-border-radius;
+            border-top-right-radius: $link-border-radius;
+        }
+        li:last-child .nav-item {
+            border-bottom-left-radius: $link-border-radius;
+            border-bottom-right-radius: $link-border-radius;
+        }
+
+        li:first-child {
+            text-align: center;
+            margin-bottom: 30px;
+
+            img {
+                width: 100%;
+                max-width: 400px;
+            }
+        }
+        li:last-child {
+            margin-top: 30px;
+
+            a {
+                color: #fff;
+                text-align: center;
+                background-color: $logo-blue;
+            }
+        }
+    }
+
+    @include screen-size(mobile) {
+        padding: 15px;
+
+        .links {
+            display: none !important;
+        }
+        .mobile-nav {
+            display: flex;
         }
     }
 }

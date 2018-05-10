@@ -41,5 +41,8 @@ h5 {
     margin: auto;
     max-width: $max-content-width;
     margin-top: $header-height;
-    padding-top: 10px;
+
+    @include screen-size(mobile) {
+        margin-top: $header-height-mobile;
+    }
 }

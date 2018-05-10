@@ -2,7 +2,7 @@
 $standard-spacing: 15px;
 $content-margins: 2.5%;
 $content-desktop-width: 100% - ($content-margins * 2);
-$content-mobile-max-width: 750px;
+$content-mobile-max-width: 1500px;
 // This mixin gives normalized spacing to every content
 // item that it is applied to according to the column layout
 // the content item resides within
@@ -46,7 +46,7 @@ body {
     }
     .content {
         @include desktop-flex-row();
-        margin-top: 50px;
+        padding-top: 25px;
         justify-content: flex-start;
 
         @include screen-size(mobile) {

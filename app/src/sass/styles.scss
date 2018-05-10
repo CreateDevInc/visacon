@@ -9,6 +9,7 @@
 @import 'product';
 @import 'product-slider';
 @import 'home';
+@import 'contact';
 * {
     margin: 0;
     font-family: $body-font;
@@ -41,7 +42,6 @@ h5 {
     margin: auto;
     max-width: $max-content-width;
     margin-top: $header-height;
-
     @include screen-size(mobile) {
         margin-top: $header-height-mobile;
     }

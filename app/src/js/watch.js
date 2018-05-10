@@ -7,3 +7,4 @@ import '../pug/templates/product.pug';
 import '../pug/components/footer.pug';
 import '../pug/components/header.pug';
 import '../pug/index.pug';
+import '../pug/contact-us.pug';

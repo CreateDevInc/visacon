@@ -1,4 +1,51 @@
+//Ok so I refactored my own code and I tried to follow the convention that
+// you did in switch.js
+//And you're totally right. This makes code WAY shorter and easier to manage....
+
+
 (function() {
+    //making the variables for the two buttons that activate the popup
+    var contactBtn = document.querySelector("#contact-btn");
+    var sendBtn = document.querySelector("#send-btn");
+
+    //variable targeting the contact div
+    var contactDiv = document.querySelector("#contact-target");
+
+    //var for cancel button
+    var cancelBtn = document.querySelector("#cancel-btn");
+
+    //adding the event listeners
+    contactBtn.addEventListener('click', startPopup);
+    sendBtn.addEventListener('click', startPopup);
+
+
+    function startPopup(e) {
+
+        e.preventDefault();
+        contactDiv.classList.remove("hide-contact-form");
+        cancelBtn.addEventListener('click', cancelForm);
+
+    }
+
+
+    function cancelForm(e) {
+        e.preventDefault();
+        contactDiv.classList.add("hide-contact-form");
+    }
+
+
+
+    //The "send us a message" button in the footer
+    /*
+    document.querySelector("#send-btn").addEventListener("click", function(event) {
+        event.preventDefault();
+        document.querySelector("#contact-target").classList.remove("hide-contact-form");
+        document.querySelector("#cancel-btn").addEventListener("click", function(event) {
+            event.preventDefault();
+            document.querySelector("#contact-target").classList.add("hide-contact-form");
+        });
+    });
+
 
 
     //The "contact us" link in the header
@@ -12,15 +59,10 @@
     });
 
 
-    //The "send us a message" button in the footer
-    document.querySelector("#send-btn").addEventListener("click", function(event) {
-        event.preventDefault();
-        document.querySelector("#contact-target").classList.remove("hide-contact-form");
-        document.querySelector("#cancel-btn").addEventListener("click", function(event) {
-            event.preventDefault();
-            document.querySelector("#contact-target").classList.add("hide-contact-form");
-        });
-    });
 
+
+
+
+    */
 
 })();

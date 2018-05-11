@@ -108,6 +108,15 @@ header {
 // Mobile nav stuff (separated out just to 
 // keep things easier to keep track of)
 nav {
+    .fa-window-close {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        color: $logo-blue !important;
+        font-size: 30px;
+        z-index: 9999;
+    }
+
     .mobile-nav {
         cursor: pointer;
         display: none;

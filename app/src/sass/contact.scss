@@ -2,7 +2,10 @@
 .contact-form {
     margin: 92px auto 20px auto;
     padding: 20px 45px 20px 45px;
-    width: 470px;
+    width: 40%;
+    @include screen-size(mobile) {
+        width: 50%;
+    }
     background-color: $logo-blue;
     color: white;
     a {
@@ -14,19 +17,19 @@
         position: relative;
         top: -20px;
         right: -45px;
-        font-size: $normal;
         padding: 10px;
+        font-size: $normal;
     }
     h1 {
         font-size: 24px;
     }
     p {
-        font-size: $normal;
         padding: 15px 0 10px 0;
+        font-size: $normal;
     }
     label {
-        display: block;
         margin: 15px 0 15px 0;
+        display: block;
         input {
             display: block;
             width: 100%;
@@ -41,12 +44,13 @@
     }
     button {
         display: block;
-        margin: 15px 0 0 0;
         width: 50%;
-        background-color: $copy-background;
-        border: none;
         color: white;
+        cursor: pointer;
         height: 50px;
+        margin: 15px 0 0 0;
+        border: none;
         font-size: $normal;
+        background-color: $copy-background;
     }
 }

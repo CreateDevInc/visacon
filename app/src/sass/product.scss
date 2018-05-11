@@ -166,10 +166,11 @@ body {
         top: 0px;
         z-index: 40;
         background-color: $opaque-background;
+        display: flex;
+        justify-content: center;
         .contact-form {
             position: fixed;
-            left: 25%;
-            margin: 55px 0 20px 0;
+            margin: 3% 0 20px 0;
             z-index: 5;
         }
     }

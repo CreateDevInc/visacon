@@ -4,6 +4,7 @@
   for (let x = 0; x < imageSliders.length; x++) {
     const imageSlider = imageSliders[x];
     const dotsContainer = imageSlider.querySelector('.dots');
+    const controlsContainer = imageSlider.querySelector('.control-container');
 
     const arrows = imageSlider.getElementsByTagName('i');
     const images = imageSlider.getElementsByTagName('img');
@@ -13,6 +14,12 @@
     let currentSlide = 0;
   
     let minimumHeight = 0;
+
+    // hide the slider controls if there's only a single image to display
+    if (numOfSlides <= 1) {
+      dotsContainer.style.display = 'none';
+      controlsContainer.style.display = 'none';
+    }
   
     for (let i = 0; i < images.length; i++) {
       slides.push(images[i].src);
@@ -26,7 +33,7 @@
       dotsContainer.appendChild(dot);
     }
   
-    imageSlider.style.minHeight = minimumHeight + 'px';
+    // imageSlider.style.minHeight = minimumHeight + 'px';
   
     const dots = dotsContainer.childNodes;
   

@@ -114,7 +114,7 @@ nav {
         right: 30px;
         color: $logo-blue !important;
         font-size: 30px;
-        z-index: 9999;
+        z-index: 997;
     }
 
     .mobile-nav {
@@ -155,7 +155,7 @@ nav {
 
     .mobile-nav .overlay {
         z-index: 998;
-        background-color: #fff;
+        background-color: transparent;
     }
 
     .mobile-container {

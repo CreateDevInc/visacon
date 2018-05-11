@@ -37,6 +37,9 @@ main {
         h2 {
             background-color: $btn-hover;
         }
+        .hover-cover {
+            opacity: 1;
+        }
     }
     div {
         width: 200px;
@@ -44,11 +47,10 @@ main {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        background-color: #c2c2c2;
-        p {
-            color: white;
-            padding: 8px;
-            font-size: $normal;
+        background-color: $foot-info;
+        img {
+            width: 200px;
+            height: 219px;
         }
         h2 {
             color: white;
@@ -56,6 +58,18 @@ main {
             font-size: $small;
             background-color: $logo-blue;
             transition-duration: 300ms;
+        }
+        .hover-cover {
+            height: 219px;
+            opacity: 0;
+            position: absolute;
+            background-color: $opaque-background;
+            transition-duration: 300ms;
+            p {
+                color: white;
+                padding: 8px;
+                font-size: $normal;
+            }
         }
     }
 }

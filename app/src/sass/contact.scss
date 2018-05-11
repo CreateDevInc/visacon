@@ -1,6 +1,6 @@
 //styling for the contact form
 .contact-form {
-    margin: 100px auto 50px auto;
+    margin: 92px auto 20px auto;
     padding: 20px 45px 20px 45px;
     width: 470px;
     background-color: $logo-blue;
@@ -8,14 +8,14 @@
     a {
         text-decoration: none;
         color: white;
-        i {
-            float: right;
-            position: relative;
-            top: -20px;
-            right: -45px;
-            font-size: $normal;
-            padding: 10px;
-        }
+    }
+    i {
+        float: right;
+        position: relative;
+        top: -20px;
+        right: -45px;
+        font-size: $normal;
+        padding: 10px;
     }
     h1 {
         font-size: 24px;
@@ -33,6 +33,10 @@
             height: 50px;
             font-size: $headings;
             padding-left: 10px;
+        }
+        textarea {
+            display: block;
+            width: 100%;
         }
     }
     button {

@@ -131,8 +131,9 @@ body {
             }
         }
         h2 {
-            font-size: $med-big;
+            font-size: $normal;
             margin-top: $standard-spacing;
+            color: $copy-background;
         }
         .left,
         .right {
@@ -151,10 +152,6 @@ body {
             padding-top: 3px;
             padding-left: 20px;
             margin-bottom: $standard-spacing / 2;
-            list-style-type: none;
-            li:before {
-                content: '- ';
-            }
             li {
                 color: $copy-background;
                 font-size: $normal;
@@ -162,17 +159,19 @@ body {
         }
     }
     .contact-popup {
+        @include transition(750ms, opacity);
         width: 100%;
         height: 100%;
         position: fixed;
         top: 0px;
         z-index: 40;
-        background-color: #666666a6;
+        background-color: $opaque-background;
+        display: flex;
+        justify-content: center;
         .contact-form {
             position: fixed;
-            left: 25%;
+            margin: 3% 0 20px 0;
             z-index: 5;
-            margin: 55px 0 20px 0;
         }
     }
     .hide-contact-form {

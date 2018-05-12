@@ -2,6 +2,11 @@ Things we need:
 - Homepage design confirmation
 - Homepage banners
 - Product images for each page --DONE
-- Product descriptions for each page 
+- Product descriptions for each page -- I think this is done...
 - Downloadable brochures (we can probably grab these off of the current Cryometrix site) --DONE
 - Downloadable maps
+- Storage space calculator?
+- Standardize image sizes
+- Contact form functionality / lambda function 
+- hosting for the site
+- switching the domain name over

@@ -4,10 +4,11 @@
 
 
 (function() {
-    //making the variables for the three buttons that activate the popup
+    //making the variables for the buttons that activate the popup
     var contactBtn = document.querySelector("#contact-btn");
     var sendBtn = document.querySelector("#send-btn");
     var mobileBtn = document.querySelector("#mobile-contact-btn");
+    var emailBtn = document.querySelector("#email-btn");
 
     //variable targeting the contact div
     var contactDiv = document.querySelector("#contact-target");
@@ -19,6 +20,7 @@
     contactBtn.addEventListener('click', startPopup);
     sendBtn.addEventListener('click', startPopup);
     mobileBtn.addEventListener('click', startPopup);
+    emailBtn.addEventListener('click', startPopup);
 
 
     function startPopup(e) {

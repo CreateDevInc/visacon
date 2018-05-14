@@ -27,6 +27,10 @@
         contactDiv.classList.remove("hide-contact-form");
         cancelBtn.addEventListener('click', cancelForm);
 
+        // this hides the mobile nav menu when the contact form pops
+        // up.
+        window.location.hash = '';
+
     }
 
 

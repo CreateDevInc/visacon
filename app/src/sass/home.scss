@@ -72,15 +72,26 @@ main {
         }
     }
     div {
+<<<<<<< HEAD
+        width: 220px;
+        height: 335px;
+=======
         width: 150px;
         height: 250px;
+>>>>>>> 43091722c3073a54e7ed7fc63ee8d90534baaf6b
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         background-color: $foot-info;
-        img {
-            width: 200px;
-            height: 219px;
+        .img-align-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            img {
+                width: 220px;
+            }
         }
         h2 {
             color: white;
@@ -90,7 +101,7 @@ main {
             transition-duration: 300ms;
         }
         .hover-cover {
-            height: 219px;
+            height: 304px;
             opacity: 0;
             position: absolute;
             background-color: $opaque-background;

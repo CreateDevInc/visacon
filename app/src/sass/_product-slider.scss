@@ -50,7 +50,11 @@
     bottom: 0;
     position: absolute;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 100px;
+
+    @include screen-size(mobile) {
+      margin-bottom: 0;
+    }
 
     i {
       color: $foot-info;

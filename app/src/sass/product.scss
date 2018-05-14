@@ -64,7 +64,7 @@ body {
                 @include content-item();
                 div {
                     display: flex;
-                    justify-content: space-between;
+                    justify-content: flex-start;
                 }
                 p {
                     color: $copy-background;
@@ -76,6 +76,13 @@ body {
                     padding: ($standard-spacing / 2) 0;
                     text-decoration: underline;
                     transition-duration: 300ms;
+                    display: block;
+                    
+                    margin-left: 25px;
+
+                    &:first-child {
+                        margin-left: 0;
+                    }
                 }
                 a:hover {
                     color: $link-hover;

@@ -46,3 +46,11 @@ h5 {
         margin-top: $header-height-mobile;
     }
 }
+
+// This isn't global, but it's a one-off
+// style for a single page, so I plopped it
+// here.
+.thanks h1 {
+    padding: 50px;
+    text-align: center;
+}

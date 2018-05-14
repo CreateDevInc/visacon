@@ -12,3 +12,4 @@ import '../pug/components/header.pug';
 import '../pug/index.pug';
 import '../pug/contact.pug';
 import '../pug/components/contact-component.pug';
+import '../pug/thanks.pug';

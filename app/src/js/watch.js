@@ -11,3 +11,4 @@ import '../pug/components/footer.pug';
 import '../pug/components/header.pug';
 import '../pug/index.pug';
 import '../pug/contact.pug';
+import '../pug/components/contact-component.pug';

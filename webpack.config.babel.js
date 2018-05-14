@@ -7,7 +7,7 @@ module.exports = {
   mode: "development",
   entry: {
     main: "./app/src/js/index.js",
-    styles: "./app/src/sass/styles.scss"
+    // styles: "./app/src/sass/styles.scss"
   },
   output: {
     path: path.resolve(__dirname, "app/dist"),

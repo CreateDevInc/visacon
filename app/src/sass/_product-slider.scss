@@ -70,10 +70,17 @@
     }
   
     img:first-child {
-      width: 100%;
-      max-width: 420px;
+      height: 400px;
       margin: auto;
       display: block;
+
+      @include screen-size(mobile) {
+        margin-top: 40px;
+      }
+
+      @include screen-size(sm) {
+        height: 300px;
+      }
     }
   }
 }

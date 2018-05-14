@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //styling for the contact form
 .contact-form {
     margin: 92px auto 20px auto;
@@ -53,4 +54,61 @@
         font-size: $normal;
         background-color: $copy-background;
     }
+=======
+//styling for the contact form
+.contact-form {
+    margin: 92px auto 20px auto;
+    padding: 20px 45px 20px 45px;
+    width: 40%;
+    @include screen-size(mobile) {
+        width: 50%;
+    }
+    background-color: $logo-blue;
+    color: white;
+    a {
+        text-decoration: none;
+        color: white;
+    }
+    i {
+        float: right;
+        position: relative;
+        top: -20px;
+        right: -45px;
+        padding: 10px;
+        font-size: $normal;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    p {
+        padding: 15px 0 10px 0;
+        font-size: $normal;
+    }
+    label {
+        margin: 15px 0 15px 0;
+        display: block;
+    }
+    input {
+        display: block;
+        width: 100%;
+        height: 50px;
+        font-size: $headings;
+        padding-left: 10px;
+    }
+    textarea {
+        display: block;
+        width: 100%;
+    }
+    button {
+        display: block;
+        width: 50%;
+        color: white;
+        cursor: pointer;
+        height: 50px;
+        margin: 15px 0 0 0;
+        border: none;
+        font-size: $normal;
+        background-color: $copy-background;
+    }
+>>>>>>> 43091722c3073a54e7ed7fc63ee8d90534baaf6b
 }

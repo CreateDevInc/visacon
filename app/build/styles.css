@@ -1,79 +1,62 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400);@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);footer {
-  clear: both; }
+  clear: both;
+  background-color: #e6e6e6; }
   footer h5 {
     font-size: 20px; }
   footer .foot-info {
+    margin: 0 12%;
     height: 250px;
-    background-color: #e6e6e6;
     display: flex;
-    justify-content: space-between; }
-    @media only screen and (max-width: 430px) {
-      footer .foot-info {
-        justify-content: space-around; } }
+    justify-content: flex-start; }
     footer .foot-info .container-1 {
       display: flex;
       justify-content: flex-start; }
-    footer .foot-info .foot-products {
-      max-width: 250px; }
-      footer .foot-info .foot-products ul {
-        padding-left: 0; }
-      footer .foot-info .foot-products li {
-        list-style: none; }
-        footer .foot-info .foot-products li a {
-          display: block;
-          padding: 5px;
-          color: #009cdc;
-          font-size: 17px;
-          font-weight: normal;
-          transition-duration: 300ms; }
-        footer .foot-info .foot-products li a:hover {
-          color: black; }
+    footer .foot-info .foot-products ul {
+      padding-left: 0; }
+    footer .foot-info .foot-products li {
+      list-style: none; }
+      footer .foot-info .foot-products li a {
+        color: #009cdc;
+        padding: 5px;
+        display: block;
+        font-size: 17px;
+        font-weight: normal;
+        transition-duration: 300ms; }
+      footer .foot-info .foot-products li a:hover {
+        color: black; }
     footer .foot-info .foot-contact {
       width: 100%;
       max-width: 250px;
-      font-size: 17px; }
+      font-size: 17px;
+      margin-left: 110px; }
       footer .foot-info .foot-contact p {
         color: #666666; }
       footer .foot-info .foot-contact a {
+        width: 80%;
+        color: white;
         margin: 15px auto;
         display: block;
-        color: white;
         padding: 8px 0;
         text-align: center;
         border-radius: 1px;
         text-decoration: none;
         background-color: #009cdc;
-        transition-duration: 300ms;
-        width: 80%; }
+        transition-duration: 300ms; }
       footer .foot-info .foot-contact a:hover {
         background-color: #38bcf3; }
     footer .foot-info .foot-contact,
     footer .foot-info .foot-products {
       height: 100%;
       display: flex;
-      margin-left: 30px;
       flex-direction: column;
       justify-content: center; }
-      @media only screen and (max-width: 430px) {
-        footer .foot-info .foot-contact,
-        footer .foot-info .foot-products {
-          padding: 5px;
-          max-width: 50%;
-          margin-left: 0px; }
-          footer .foot-info .foot-contact a,
-          footer .foot-info .foot-contact li > a,
-          footer .foot-info .foot-contact p,
-          footer .foot-info .foot-products a,
-          footer .foot-info .foot-products li > a,
-          footer .foot-info .foot-products p {
-            font-size: 14px; } }
     footer .foot-info .container-2 {
-      align-self: flex-end;
+      color: #666666;
       margin: 0 15px 15px 0;
-      color: #666666; }
+      align-self: flex-end; }
       footer .foot-info .container-2 a {
-        text-decoration: none;
         color: #666666;
+        text-decoration: none;
         transition-duration: 300ms; }
         footer .foot-info .container-2 a:hover {
           color: #009cdc; }
@@ -82,15 +65,34 @@
           display: none; } }
   footer .copyright {
     width: 100%;
-    background-color: #666666;
+    color: white;
     text-align: right;
-    color: white; }
+    background-color: #666666; }
     footer .copyright h5 {
-      font-weight: normal;
-      padding: 7px 25px 7px 0; }
-      @media only screen and (max-width: 430px) {
-        footer .copyright h5 {
-          font-size: "Open Sans", Arial, serif; } }
+      padding: 7px 25px 7px 0;
+      font-size: 14px;
+      font-weight: normal; }
+
+@media screen and (max-width: 630px) {
+  footer {
+    padding-top: 5px; }
+    footer .foot-info {
+      height: 400px;
+      flex-direction: column;
+      justify-content: center; }
+      footer .foot-info .foot-contact,
+      footer .foot-info .foot-products {
+        height: auto;
+        margin: 20px 0; }
+        footer .foot-info .foot-contact a,
+        footer .foot-info .foot-products a {
+          margin-left: 0; } }
+
+@media only screen and (max-width: 1080px) {
+  footer .foot-info {
+    justify-content: space-between; }
+  footer .foot-contact {
+    margin-left: 0px; } }
 
 header {
   top: 0;
@@ -390,9 +392,9 @@ body .contact-popup {
   display: flex;
   justify-content: center; }
   body .contact-popup .contact-form {
-    position: fixed;
     margin: 3% 0 20px 0;
-    z-index: 5; }
+    z-index: 5;
+    position: absolute; }
     @media only screen and (max-width: 430px) {
       body .contact-popup .contact-form {
         box-sizing: border-box;
@@ -627,7 +629,7 @@ main {
     top: -20px;
     right: -45px;
     padding: 10px;
-    font-size: 17px; }
+    font-size: 30px; }
   .contact-form h1 {
     font-size: 24px; }
   .contact-form p {
@@ -646,13 +648,13 @@ main {
       display: block;
       width: 100%; }
   .contact-form button {
-    display: block;
     width: 50%;
     color: white;
     cursor: pointer;
     height: 50px;
     margin: 15px 0 0 0;
     border: none;
+    display: block;
     font-size: 17px;
     background-color: #666666; }
 

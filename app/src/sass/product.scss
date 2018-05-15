@@ -175,10 +175,12 @@ body {
         background-color: $opaque-background;
         display: flex;
         justify-content: center;
+        
         .contact-form {
-            position: fixed;
             margin: 3% 0 20px 0;
             z-index: 5;
+            position: absolute;
+
             @include screen-size(sm) {
                 box-sizing: border-box;
                 margin: 0;

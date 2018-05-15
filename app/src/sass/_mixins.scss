@@ -21,6 +21,14 @@
   justify-content: center;
 }
 
+@mixin clearfix($className) {
+  #{$className}:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
 @mixin transition($duration: .5s, $type: all) {
   -webkit-transition: $type $duration;
   -moz-transition: $type $duration;

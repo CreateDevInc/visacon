@@ -3,6 +3,8 @@ const WebpackOnBuildPlugin = require('on-build-webpack');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const shell = require('shelljs');
 
+const output = process.env['CRYOMETRIX_BUILD'] === 'prod' ? 'build' : 'dist';
+
 module.exports = {
   mode: "development",
   entry: {
@@ -10,7 +12,7 @@ module.exports = {
     // styles: "./app/src/sass/styles.scss"
   },
   output: {
-    path: path.resolve(__dirname, "app/dist"),
+    path: path.resolve(__dirname, `app/${output}`),
     filename: "[name].js"
   },
   module: {

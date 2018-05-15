@@ -3,21 +3,16 @@ const gulp = require('gulp');
 const clean = require('gulp-clean');
 const surge = require('surge');
 
-gulp.task('deploy:test', [], function () {
-  return surge({
-    project: './app/dist',         // Path to your static build directory
-    domain: 'cryometrixischill.surge.sh'  // Your domain or Surge subdomain
-  })
-})
+const output = process.env['CRYOMETRIX_BUILD'] === 'prod' ? 'build' : 'dist';
  
 gulp.task('pug', function buildHTML() {
   return gulp.src('./app/src/pug/*.pug')
   .pipe(pug())
-  .pipe(gulp.dest('./app/dist'));
+  .pipe(gulp.dest(`./app/${output}`));
 });
 
 gulp.task('assets', function moveImagesFolder() {
-  return gulp.src('./app/src/assets/**/*').pipe(gulp.dest('./app/dist'));
+  return gulp.src('./app/src/assets/**/*').pipe(gulp.dest(`./app/${output}`));
 });
 
 gulp.task('default', ['pug', 'assets']);

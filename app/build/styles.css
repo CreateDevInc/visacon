@@ -404,10 +404,6 @@ body .contact-popup {
         body .contact-popup .contact-form input {
           height: 30px; } }
 
-body .hide-contact-form {
-  opacity: 0;
-  pointer-events: none; }
-
 .hidden {
   display: none; }
 

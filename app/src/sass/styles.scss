@@ -2,6 +2,7 @@
 // global to the entire site. If a given style is
 // only found on a specific page, it should be
 // put in a file that is associated with that page
+
 @import 'variables';
 @import 'mixins';
 @import 'footer';
@@ -37,7 +38,7 @@ h4,
 h5 {
     font-weight: 400;
 }
-
+//
 #wrapper {
     margin: auto;
     max-width: $max-content-width;

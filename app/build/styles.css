@@ -615,8 +615,8 @@ main {
   margin: 92px auto 20px auto;
   padding: 20px 45px 20px 45px;
   width: 40%;
-  background-color: #009cdc;
-  color: white; }
+  color: white;
+  background-color: #009cdc; }
   @media only screen and (max-width: 1080px) {
     .contact-form {
       width: 50%; } }

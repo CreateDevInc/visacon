@@ -6,8 +6,8 @@
     @include screen-size(mobile) {
         width: 50%;
     }
-    background-color: $logo-blue;
     color: white;
+    background-color: $logo-blue;
     a {
         text-decoration: none;
         color: white;

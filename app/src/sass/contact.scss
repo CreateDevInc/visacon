@@ -59,6 +59,10 @@
     .flex label:nth-child(2) {
         margin-left: 15px;
     }
+
+    .required span::after {
+        content: "*";
+    }
 }
 
 // Certain items on the contact form when on the actual contact page

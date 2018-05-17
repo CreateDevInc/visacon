@@ -5,11 +5,21 @@
     p We'd love to answer your questions about our freezers!
     form(action="https://z28up1rg8h.execute-api.us-east-1.amazonaws.com/prod/CryometrixContactHandler", method="POST")
         label Name
-            input(name="name" type="text")
+            input(name="name" type="text", required)
         label Company
             input(name="company" type="text")
-        label Phone Number
-            input(name="phone" type="text")
+        .flex
+            label Email Address
+                input(name="email" type="text", required)
+            label Phone Number
+                input(name="phone" type="text", required)
+        label Product Model of Interest
+            select(name="product")
+                option(value="select") Select a model..
+                option(value="t160") T-160
+                option(value="b90") B-90
+                option(value="t90") T-90
+                option(value="s90") S-90
         label Message / Question
             textarea(name="message", cols="30", rows="5")
 

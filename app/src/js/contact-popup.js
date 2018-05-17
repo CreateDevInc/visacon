@@ -3,40 +3,39 @@
 //And you're totally right. This makes code WAY shorter and easier to manage....
 
 
-(function() {
-    //making the variables for the buttons that activate the popup
-    var contactBtn = document.querySelector("#contact-btn");
-    var sendBtn = document.querySelector("#send-btn");
-    var mobileBtn = document.querySelector("#mobile-contact-btn");
-    var emailBtn = document.querySelector("#email-btn");
+(function () {
+    if (!window.location.href.includes('contact')) {
+        //making the variables for the buttons that activate the popup
+        var sendBtn = document.querySelector("#send-btn");
+        var mobileBtn = document.querySelector("#mobile-contact-btn");
 
-    //variable targeting the contact div
-    var contactDiv = document.querySelector("#contact-target");
+        //variable targeting the contact div
+        var contactDiv = document.querySelector("#contact-form-popup");
 
-    //var for cancel button
-    var cancelBtn = document.querySelector("#cancel-btn");
+        //var for cancel button
+        var cancelBtn = document.querySelector("#cancel-btn");
 
-    //adding the event listeners
-    contactBtn.addEventListener('click', startPopup);
-    sendBtn.addEventListener('click', startPopup);
-    mobileBtn.addEventListener('click', startPopup);
-    emailBtn.addEventListener('click', startPopup);
+        //adding the event listeners
+        sendBtn.addEventListener('click', startPopup);
+        mobileBtn.addEventListener('click', startPopup);
+
+        function startPopup(e) {
+            e.preventDefault();
+            contactDiv.classList.remove("hide-contact-form");
+            cancelBtn.addEventListener('click', cancelForm);
+
+            // this hides the mobile nav menu when the contact form pops up.
+            window.location.hash = '';
+        }
 
 
-    function startPopup(e) {
-        e.preventDefault();
-        contactDiv.classList.remove("hide-contact-form");
-        cancelBtn.addEventListener('click', cancelForm);
-
-        // this hides the mobile nav menu when the contact form pops up.
-        window.location.hash = '';
+        function cancelForm(e) {
+            e.preventDefault();
+            contactDiv.classList.add("hide-contact-form");
+            cancelBtn.removeEventListener('click', cancelForm);
+        }
     }
 
-
-    function cancelForm(e) {
-        e.preventDefault();
-        contactDiv.classList.add("hide-contact-form");
-    }
 
 
 
@@ -44,10 +43,10 @@
     /*
     document.querySelector("#send-btn").addEventListener("click", function(event) {
         event.preventDefault();
-        document.querySelector("#contact-target").classList.remove("hide-contact-form");
+        document.querySelector("#contact-form-popup").classList.remove("hide-contact-form");
         document.querySelector("#cancel-btn").addEventListener("click", function(event) {
             event.preventDefault();
-            document.querySelector("#contact-target").classList.add("hide-contact-form");
+            document.querySelector("#contact-form-popup").classList.add("hide-contact-form");
         });
     });
 
@@ -56,10 +55,10 @@
     //The "contact us" link in the header
     document.querySelector("#contact-btn").addEventListener("click", function(event) {
         event.preventDefault();
-        document.querySelector("#contact-target").classList.remove("hide-contact-form");
+        document.querySelector("#contact-form-popup").classList.remove("hide-contact-form");
         document.querySelector("#cancel-btn").addEventListener("click", function(event) {
             event.preventDefault();
-            document.querySelector("#contact-target").classList.add("hide-contact-form");
+            document.querySelector("#contact-form-popup").classList.add("hide-contact-form");
         });
     });
 

@@ -1,17 +1,14 @@
 //styling for the contact form
 .contact-form {
-    margin: 92px auto 20px auto;
-    padding: 20px 45px 20px 45px;
-    width: 40%;
-    @include screen-size(mobile) {
-        width: 50%;
-    }
     color: white;
+    padding: 20px 45px 20px 45px;
     background-color: $logo-blue;
+
     a {
         text-decoration: none;
         color: white;
     }
+
     i {
         float: right;
         position: relative;
@@ -20,16 +17,20 @@
         padding: 10px;
         font-size: $close-icon;
     }
+
     h1 {
         font-size: 24px;
     }
+
     p {
         padding: 15px 0 10px 0;
         font-size: $normal;
     }
+
     label {
         margin: 15px 0 15px 0;
         display: block;
+
         input {
             display: block;
             width: 100%;
@@ -37,6 +38,7 @@
             font-size: $headings;
             padding-left: 10px;
         }
+
         textarea {
             display: block;
             width: 100%;
@@ -53,4 +55,42 @@
         font-size: $normal;
         background-color: $copy-background;
     }
+}
+
+// Certain items on the contact form when on the actual contact page
+// shouldn't be displayed, since those same items are visible on 
+// other parts of the page.
+.contact .contact-form {
+    >h1,
+    >p,
+    >a .fa-times {
+        display: none;
+    }
+}
+
+.contact .contact-form i.fa-times {
+    display: none;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-around;
+
+    > div {
+        width: 40%;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-weight: 600;
+    }
+
+    .info {
+        padding-left: 25px;
+    }
+
+    padding: 50px 0;
 }

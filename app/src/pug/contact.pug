@@ -5,8 +5,32 @@ html
   body
     include components/header
 
-    #wrapper
-        include components/contact-component
-
+    #wrapper.contact
+      div
+        h1 Contact Us
+        br
+        p We're always looking to get feedback from our clients,
+        | whether they've purchased from us in the past, or are thinking
+        | about doing business with us in the future. Please feel free to
+        | reach out to us with any questions about our products.
+        br
+        br
+        p You can reach out to us directly with one of the contact methods listed below, or you can send us an email by using the contact form conveniently located on this page. We'll get back to you as soon as possible.
+        br
+        br
+        h3 Address
+        .info
+          p Reflect Scientific Inc.
+          p 1266 South 1380 West   
+          p Orem, Utah   84058     
+        br
+        h3 Email
+        .info
+          p #[a(href="mailto:info@cryometrix.com") info@cryometrix.com]
+        br
+        h3 Telephone
+        .info
+          p (801) 226-4100
+      include components/contact-component
 
     include components/footer

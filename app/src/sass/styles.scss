@@ -3,17 +3,22 @@
 // only found on a specific page, it should be
 // put in a file that is associated with that page
 
-@import 'variables';
 @import 'mixins';
+@import 'variables';
+@import 'home';
+@import 'contact';
 @import 'footer';
 @import 'header';
 @import 'product';
 @import 'product-slider';
-@import 'home';
-@import 'contact';
+
 * {
     margin: 0;
     font-family: $body-font;
+}
+
+a {
+    color: $logo-blue;
 }
 
 sup {

@@ -6,11 +6,10 @@
     form(action="https://z28up1rg8h.execute-api.us-east-1.amazonaws.com/prod/CryometrixContactHandler", method="POST")
         label.required #[span Name]
             input(name="name" type="text", required)
-        .flex
-            label.required #[span Email Address]
-                input(name="email" type="text", required)
-            label.required #[span Phone Number]
-                input(name="phone" type="text", required)
+        label.required #[span Email Address]
+            input(name="email" type="text", required)
+        label.required #[span Phone Number]
+            input(name="phone" type="text", required)
         label Company
             input(name="company" type="text")
         label Product Model of Interest

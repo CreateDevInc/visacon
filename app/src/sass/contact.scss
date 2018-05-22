@@ -30,6 +30,7 @@
     label {
         margin: 15px 0 15px 0;
         display: block;
+        flex: 1;
 
         input, select {
             display: block;
@@ -86,6 +87,23 @@
 
     > div {
         width: 40%;
+    }
+
+    @media screen and (max-width: 850px) {
+        display: block;
+
+        > div {
+            box-sizing: border-box;
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+            padding: 30px;
+            padding-top: 30px;
+        }
+        > div:first-child {
+            margin-bottom: 50px;
+            padding-top: 0;
+        }
     }
 
     h1 {

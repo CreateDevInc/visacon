@@ -109,7 +109,7 @@ header {
 // keep things easier to keep track of)
 nav {
     .fa-times {
-        position: absolute;
+        position: fixed;
         top: 30px;
         right: 30px;
         color: $logo-blue !important;
@@ -177,13 +177,17 @@ nav {
 
         .nav-item {
             color: $logo-blue;
-            padding: 20px;
-            background-color: #fff;
+            padding: 15px;
+            background-color: transparent;
             text-decoration: none;
             font-size: 22px;
+
+            i {
+                color: $logo-blue;
+            }
         }
 
-        li:first-child {
+        .logo {
             text-align: center;
             margin-bottom: 20px;
 
@@ -192,14 +196,39 @@ nav {
                 max-width: 400px;
             }
         }
-        li:last-child {
-            margin-top: 20px;
+        .contact {
+            margin-top: 0px;
+            padding-top: 35px;
 
             a {
                 color: #fff;
                 text-align: center;
                 background-color: $logo-blue;
+                // width: 100%;
+                width: 220px;
+                display: block;
+                margin: auto;
             }
+        }
+        .dropdown {
+            position: relative;
+
+            a {
+                width: 200px;
+                position: relative;
+            }
+        }
+        .dropdown ul {
+            @include transition(.5s, max-height);
+            max-height: 0;
+
+            li {
+                padding-left: 15px;
+            }
+        }
+        .dropdown.expanded ul {
+            border: 1px solid $logo-blue;
+            max-height: 500px;
         }
     }
 

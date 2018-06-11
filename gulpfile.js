@@ -6,7 +6,7 @@ const surge = require('surge');
 const output = process.env['CRYOMETRIX_BUILD'] === 'prod' ? 'build' : 'dist';
  
 gulp.task('pug', function buildHTML() {
-  return gulp.src('./app/src/pug/*.pug')
+  return gulp.src('./app/src/pug/**/*.pug')
   .pipe(pug())
   .pipe(gulp.dest(`./app/${output}`));
 });

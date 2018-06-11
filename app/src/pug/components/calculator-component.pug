@@ -1,0 +1,20 @@
+.calc-form
+    a(href="index.html" id="calc-cancel-btn")
+        i.fas.fa-times
+    h1 Freezer Storage Space Calculator
+    p Enter width, height, and depth of your product to calculate the storage capacity of your freezer.
+    form(id="calc-form" )
+        label.required #[span Height]
+            input(name="height" type="number", id="calc-height", pattern="\d+", step=".1", required)
+        label.required #[span Width]
+            input(name="width" type="number", id="calc-width", pattern="\d+", step=".1", required)
+        label.required #[span Depth]
+            input(name="depth" type="number", id="calc-depth", pattern="\d+", step=".1", required)
+        div.g-recaptcha(data-sitekey="6LdZ8VkUAAAAAAOu3yTln3VRZwMeLVf4Vcbpq9UZ")
+        button(type="submit" id="calc-submit-btn") Submit
+    div.hidden(id="calc-results")
+        h1 Results:
+        p Number of Shelves: #[span#calc-results-shelves]
+        p Number of Rows Wide: #[span#calc-results-rows-wide]
+        p Number of Rows Deep: #[span#calc-results-rows-deep]
+        p Cubic Space: #[span#calc-results-cubic-space]

@@ -1,0 +1,125 @@
+.calc-form {
+    color: white;
+    padding: 20px 45px 20px 45px;
+    background-color: $logo-blue;
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    i {
+        float: right;
+        position: relative;
+        top: -20px;
+        right: -45px;
+        padding: 10px;
+        font-size: $close-icon;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    p {
+        padding: 15px 0 10px 0;
+        font-size: $normal;
+    }
+
+    label {
+        margin: 15px 0 15px 0;
+        display: block;
+        flex: 1;
+
+        input, select {
+            display: block;
+            width: 100%;
+            height: 50px;
+            font-size: $headings;
+            padding-left: 10px;
+        }
+
+        textarea {
+            display: block;
+            width: 100%;
+        }
+    }
+    button {
+        width: 50%;
+        color: white;
+        cursor: pointer;
+        height: 50px;
+        margin: 15px 0 0 0;
+        border: none;
+        display: block;
+        font-size: $normal;
+        background-color: $copy-background;
+    }
+
+    .flex label:nth-child(2) {
+        margin-left: 15px;
+    }
+
+    .required span::after {
+        content: "*";
+    }
+}
+
+// Certain items on the calc form when on the actual calc page
+// shouldn't be displayed, since those same items are visible on 
+// other parts of the page.
+.calc .calc-form {
+    >h1,
+    >p,
+    >a .fa-times {
+        display: none;
+    }
+}
+
+.calc .calc-form i.fa-times {
+    display: none;
+}
+
+.calc {
+    display: flex;
+    justify-content: space-around;
+
+    > div {
+        width: 40%;
+    }
+
+    @media screen and (max-width: 850px) {
+        display: block;
+
+        > div {
+            box-sizing: border-box;
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+            padding: 30px;
+            padding-top: 30px;
+        }
+        > div:first-child {
+            margin-bottom: 50px;
+            padding-top: 0;
+        }
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-weight: 600;
+    }
+
+    .info {
+        padding-left: 25px;
+    }
+
+    padding: 50px 0;
+}
+
+#calc-results {
+    padding: 20px 0px;
+}

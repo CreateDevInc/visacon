@@ -79,6 +79,7 @@ main {
         @media screen and (min-width: $four-column-break) {
             width: $container-width / 4;
             margin-left: (100% - $container-width) / 5;
+            margin-bottom: $container-spacing;
         }
         // 2 column layout
         @media screen and (max-width: $two-column-break) {

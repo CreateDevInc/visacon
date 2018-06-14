@@ -2,7 +2,6 @@
 // global to the entire site. If a given style is
 // only found on a specific page, it should be
 // put in a file that is associated with that page
-
 @import 'mixins';
 @import 'variables';
 @import 'home';
@@ -12,14 +11,13 @@
 @import 'product';
 @import 'product-slider';
 @import 'calc';
-
 * {
     margin: 0;
     font-family: $body-font;
 }
 
 a {
-    color: $logo-blue;
+    color: $logo-color;
 }
 
 sup {
@@ -44,6 +42,7 @@ h4,
 h5 {
     font-weight: 400;
 }
+
 //
 #wrapper {
     margin: auto;

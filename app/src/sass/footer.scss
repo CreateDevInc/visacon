@@ -2,17 +2,14 @@
 footer {
     clear: both;
     background-color: $foot-info;
-
     h5 {
         font-size: $headings;
     }
-
     .foot-info {
         margin: 0 $header-footer-margins;
         height: 250px;
         display: flex;
         justify-content: flex-start;
-
         .container-1 {
             display: flex;
             justify-content: flex-start;
@@ -24,7 +21,7 @@ footer {
             li {
                 list-style: none;
                 a {
-                    color: $logo-blue;
+                    color: $logo-color;
                     padding: 5px;
                     display: block;
                     font-size: $normal;
@@ -41,11 +38,9 @@ footer {
             max-width: 250px;
             font-size: $normal;
             margin-left: 110px;
-
             p {
                 color: $copy-background;
             }
-
             a {
                 width: 80%;
                 color: white;
@@ -55,14 +50,13 @@ footer {
                 text-align: center;
                 border-radius: 1px;
                 text-decoration: none;
-                background-color: $logo-blue;
+                background-color: $logo-color;
                 transition-duration: 300ms;
             }
             a:hover {
                 background-color: $btn-hover;
             }
         }
-
         .foot-contact,
         .foot-products {
             height: 100%;
@@ -70,19 +64,16 @@ footer {
             flex-direction: column;
             justify-content: center;
         }
-
         .container-2 {
             color: $copy-background;
             margin: 0 15px 15px 0;
             align-self: flex-end;
-
             a {
                 color: $copy-background;
                 text-decoration: none;
                 transition-duration: 300ms;
-
                 &:hover {
-                    color: $logo-blue;
+                    color: $logo-color;
                 }
             }
             @include screen-size(mobile) {
@@ -95,7 +86,6 @@ footer {
         color: white;
         text-align: right;
         background-color: $copy-background;
-
         h5 {
             padding: 7px 25px 7px 0;
             font-size: 14px;
@@ -108,22 +98,20 @@ footer {
 footer {
     @media screen and (max-width: 630px) {
         padding-top: 5px;
-
         .foot-info {
             height: 400px;
             flex-direction: column;
             justify-content: center;
-    
             .foot-contact,
             .foot-products {
                 height: auto;
                 margin: 20px 0;
-
-                a { margin-left: 0; }
+                a {
+                    margin-left: 0;
+                }
             }
         }
     }
-    
     @include screen-size(mobile) {
         .foot-info {
             justify-content: space-between;

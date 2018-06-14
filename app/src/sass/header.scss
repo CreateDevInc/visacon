@@ -6,18 +6,15 @@ header {
     width: 100%;
     z-index: 30;
     position: fixed;
-
     nav {
         display: flex;
         text-align: right;
         justify-content: space-between;
-        background-color: $logo-blue;
-
+        background-color: $logo-color;
         >div {
             display: flex;
             flex-direction: column;
             justify-content: center;
-
             & {
                 margin-right: $header-footer-margins;
             }
@@ -25,7 +22,6 @@ header {
                 margin-left: $header-footer-margins;
                 margin-right: 0;
             }
-
             @include screen-size(sm) {
                 & {
                     margin-right: 10px;
@@ -34,7 +30,6 @@ header {
                     margin-left: 0;
                 }
             }
-
             a {
                 display: block;
                 img {
@@ -42,7 +37,6 @@ header {
                 }
             }
         }
-
         .links {
             display: flex;
             flex-direction: column;
@@ -80,15 +74,13 @@ header {
                 box-sizing: border-box;
                 pointer-events: none;
                 background-color: #fff;
-
-                border: 3px solid $logo-blue;
+                border: 3px solid $logo-color;
                 border-top: none;
-
                 >a {
-                    color: $logo-blue;
+                    color: $logo-color;
                     display: block;
                     padding: 10px !important;
-                    border-bottom: 1px solid $logo-blue;
+                    border-bottom: 1px solid $logo-color;
                 }
                 >a:last-child {
                     border-bottom: none;
@@ -112,22 +104,22 @@ nav {
         position: fixed;
         top: 30px;
         right: 30px;
-        color: $logo-blue !important;
+        color: $logo-color !important;
         font-size: $close-icon;
         z-index: 997;
     }
-
     .mobile-nav {
         cursor: pointer;
         display: none;
         font-size: $huge-headings;
-        a, i {
+        a,
+        i {
             color: #fff;
         }
     }
-
-    .mobile-nav > a { display: block; }
-
+    .mobile-nav>a {
+        display: block;
+    }
     .mobile-nav ul,
     .mobile-nav .overlay,
     .mobile-nav .mobile-container {
@@ -135,13 +127,12 @@ nav {
         pointer-events: none;
         @include transition(.7s, opacity);
     }
-    .mobile-nav:target ul, 
+    .mobile-nav:target ul,
     .mobile-nav:target .overlay,
     .mobile-nav:target .mobile-container {
         opacity: 1;
         pointer-events: all;
     }
-
     .overlay,
     .mobile-container {
         top: 0;
@@ -152,18 +143,15 @@ nav {
         position: fixed;
         background-color: #fff;
     }
-
     .mobile-nav .overlay {
         z-index: 998;
         background-color: transparent;
     }
-
     .mobile-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
-
     .mobile-nav ul {
         position: relative;
         z-index: 999;
@@ -174,23 +162,19 @@ nav {
         text-align: left;
         list-style: none;
         padding: 0;
-
         .nav-item {
-            color: $logo-blue;
+            color: $logo-color;
             padding: 15px;
             background-color: transparent;
             text-decoration: none;
             font-size: 22px;
-
             i {
-                color: $logo-blue;
+                color: $logo-color;
             }
         }
-
         .logo {
             text-align: center;
             margin-bottom: 20px;
-
             img {
                 width: 100%;
                 max-width: 400px;
@@ -199,11 +183,10 @@ nav {
         .contact {
             margin-top: 0px;
             padding-top: 35px;
-
             a {
                 color: #fff;
                 text-align: center;
-                background-color: $logo-blue;
+                background-color: $logo-color;
                 // width: 100%;
                 width: 220px;
                 display: block;
@@ -212,7 +195,6 @@ nav {
         }
         .dropdown {
             position: relative;
-
             a {
                 width: 200px;
                 position: relative;
@@ -221,20 +203,17 @@ nav {
         .dropdown ul {
             @include transition(.5s, max-height);
             max-height: 0;
-
             li {
                 padding-left: 15px;
             }
         }
         .dropdown.expanded ul {
-            border: 1px solid $logo-blue;
+            border: 1px solid $logo-color;
             max-height: 500px;
         }
     }
-
     @include screen-size(mobile) {
         padding: 15px;
-
         .links {
             display: none !important;
         }

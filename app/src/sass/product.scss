@@ -71,15 +71,13 @@ body {
                     line-height: 1.5;
                 }
                 a {
-                    color: $logo-blue;
+                    color: $logo-color;
                     cursor: pointer;
                     padding: ($standard-spacing / 2) 0;
                     text-decoration: underline;
                     transition-duration: 300ms;
                     display: block;
-                    
                     margin-left: 25px;
-
                     &:first-child {
                         margin-left: 0;
                     }
@@ -175,12 +173,10 @@ body {
         background-color: $opaque-background;
         display: flex;
         justify-content: center;
-        
         .contact-form {
             margin: 3% 0 20px 0;
             z-index: 5;
             position: absolute;
-
             @include screen-size(sm) {
                 box-sizing: border-box;
                 margin: 0;
@@ -202,12 +198,10 @@ body {
         background-color: $opaque-background;
         display: flex;
         justify-content: center;
-        
         .calc-form {
             margin: 3% 0 20px 0;
             z-index: 5;
             position: absolute;
-
             @include screen-size(sm) {
                 box-sizing: border-box;
                 margin: 0;
@@ -232,7 +226,7 @@ body {
 
 .switchable {
     text-decoration: underline;
-    color: $logo-blue;
+    color: $logo-color;
     transition-duration: 300ms;
 }
 

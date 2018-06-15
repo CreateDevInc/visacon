@@ -3,7 +3,12 @@
 // (i.e. pug files)
 
 
-import '../pug/product-t160.pug';
+import '../pug/p-fraction-collector.pug';
+import '../pug/p-vuv-40f.pug';
+import '../pug/p-euv.pug';
+import '../pug/p-vuv24.pug';
+import '../pug/p-vuv14.pug';
+import '../pug/p-vuv14d.pug';
 
 import '../pug/templates/product.pug';
 import '../pug/components/footer.pug';

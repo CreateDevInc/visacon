@@ -2,13 +2,22 @@ header
   nav
     div
       a(href="index.html")
-        img(src="images/Cryometrix-Logo_white.png")
+        img(src="images/roughLogo2.png")
     div.links
       ul
         li
           a(href="index.html") Home
         li
-          a(href="product-t160.html") Products 
+          .dropdown
+            span Products #[i.fas.fa-angle-down]
+            div
+              a(href="p-fraction-collector.html") Fraction Collector
+              a(href="p-vuv-40f.html") VUV-40F Detector
+              a(href="p-euv.html") EUV Detector
+              a(href="p-vuv24.html") VUV-24 Detector
+              a(href="p-vuv14.html") VUV-14 Detector
+              a(href="p-vuv14d.html") VUV-14D Detector
+           
         
         li
           a(href="contact.html" id="contact-btn") Contact Us
@@ -17,15 +26,25 @@ header
       .mobile-container
         i.fas.fa-times
         ul
-          li.logo #[img(src="images/Cryometrix-Logo_color.png")]
+          li.logo #[img(src="images/roughLogo2.png")]
           li #[a(href="index.html").nav-item Home]
           li.dropdown #[a(href="#").nav-item Products #[i.fas.fa-angle-down]]
             ul
-              li #[a(href="product-t160.html").nav-item T-160 Ultra Low Freezer]
+              li #[a(href="p-fraction-collector.html").nav-item Fraction Collector]
+              li #[a(href="p-vuv-40f.html").nav-item VUV-40F Detector]
+              li #[a(href="p-euv.html").nav-item EUV Detector]
+              li #[a(href="p-vuv24.html").nav-item VUV-24 Detector]
+              li #[a(href="p-vuv14.html").nav-item VUV-14 Detector]
+              li #[a(href="p-vuv14d.html").nav-item VUV-14D Detector]
               
           li.dropdown #[a(href="#").nav-item Applications #[i.fas.fa-angle-down]]
             ul
-              li #[a(href="product-t160.html").nav-item CAR-T Cell Storage]
+              li #[a(href="p-fraction-collector.html").nav-item Fraction Collector]
+              li #[a(href="p-vuv-40f.html").nav-item VUV-40F Detector]
+              li #[a(href="p-euv.html").nav-item EUV Detector]
+              li #[a(href="p-vuv24.html").nav-item VUV-24 Detector]
+              li #[a(href="p-vuv14.html").nav-item VUV-14 Detector]
+              li #[a(href="p-vuv14d.html").nav-item VUV-14D Detector]
               
           li.contact #[a(href="contact.html" id= "mobile-contact-btn").nav-item Contact Us]
         a(href="#").overlay

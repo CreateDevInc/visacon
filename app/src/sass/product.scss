@@ -66,7 +66,8 @@ body {
                     display: flex;
                     justify-content: flex-start;
                 }
-                p {
+                p,
+                li {
                     color: $copy-background;
                     line-height: 1.5;
                 }
@@ -138,6 +139,9 @@ body {
         h2 {
             font-size: $normal;
             margin-top: $standard-spacing;
+            color: $copy-background;
+        }
+        p {
             color: $copy-background;
         }
         .left,

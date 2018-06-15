@@ -9,6 +9,12 @@ import '../pug/p-euv.pug';
 import '../pug/p-vuv24.pug';
 import '../pug/p-vuv14.pug';
 import '../pug/p-vuv14d.pug';
+import '../pug/p-gc-ferrules.pug';
+import '../pug/p-gc-liners.pug';
+import '../pug/p-vials.pug';
+import '../pug/p-gas.pug';
+import '../pug/p-silicone.pug';
+import '../pug/p-glass.pug';
 
 import '../pug/templates/product.pug';
 import '../pug/components/footer.pug';

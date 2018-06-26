@@ -1,6 +1,4 @@
 Things we need:
-
--favicon for the tab bar
--hero image
+-hero image / content
 -captcha form key
 -adjust amazon lambda function

@@ -2,7 +2,7 @@
 // this should only be used to import the other JavaScript
 // files and import the main SCSS file for webpack to bundle it
 
-if (process.env["CRYOMETRIX_BUILD"] !== "prod") {
+if (process.env["VISACON_BUILD"] !== "prod") {
   // console.log('-----------------');
   // console.log('-----------------');
   // console.log('-----------------');

@@ -3,7 +3,7 @@
 // (i.e. pug files)
 
 
-import '../pug/p-fraction-collector.pug';
+
 import '../pug/p-vuv-40f.pug';
 import '../pug/p-euv.pug';
 import '../pug/p-vuv24.pug';

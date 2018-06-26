@@ -18,8 +18,8 @@ import '../pug/p-glass.pug';
 
 import '../pug/components/header.pug';
 import '../pug/templates/product.pug';
+import '../pug/templates/product-vuv.pug';
 import '../pug/components/footer.pug';
-
 import '../pug/index.pug';
 import '../pug/contact.pug';
 import '../pug/components/contact-component.pug';

@@ -1,5 +1,5 @@
 
-extends templates/product
+extends templates/product-vuv
 
 block product-title
   title VUV-40F Detector
@@ -18,7 +18,8 @@ block description
 block table
   p * Constant temperature with standard 10 mm cell (air). 
 
-  table    
+  table 
+      
     tr
       td Light source
       td Low pressure mercury lamp 254 nm<br>Deuterium 190 nm-400 nm<br>LED (discrete wavelengths)<br>Xenon flash 200 nm-800 nm
@@ -57,20 +58,17 @@ block image-slider
   
 
 block features-benefits
-  div
-    .left
-      div
-        h2 Variety of light sources
-        p The VUV-40F can be configured with Hg, LED, Deuterium or Xenon light sources allowing a wide selection of light throughput, wavelength selection, power and sizes to fit any application.
-      div
-        h2 Dual beam
-        p Compact patented design keeps the optical unit small but with the performance of larger instruments. This allows smaller dedicated OEM designs or smaller footprint for stand-alone instruments.
-      
-    .right
-      div
-        h2 Advanced electronics
-        p High-resolution output can be accessed by USB or IEE488 protocols. Fully programmable parameters using a host computer are permanently stored in non-volatile memory. Easily integrated with OEM analytical systems. Stand-alone operation configuration for private label instruments is also available.
-          
+  div.vuv-features 
+    div
+      h2 Variety of light sources
+      p The VUV-40F can be configured with Hg, LED, Deuterium or Xenon light sources allowing a wide selection of light throughput, wavelength selection, power and sizes to fit any application.
+    div
+      h2 Dual beam
+      p Compact patented design keeps the optical unit small but with the performance of larger instruments. This allows smaller dedicated OEM designs or smaller footprint for stand-alone instruments.
+    div
+      h2 Advanced electronics
+      p High-resolution output can be accessed by USB or IEE488 protocols. Fully programmable parameters using a host computer are permanently stored in non-volatile memory. Easily integrated with OEM analytical systems. Stand-alone operation configuration for private label instruments is also available.
+        
       
         
 

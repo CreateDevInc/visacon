@@ -101,6 +101,9 @@ body {
                         cursor: pointer;
                     }
                 }
+                p {
+                    color: $copy-background;
+                }
                 table {
                     @include content-item();
                     border-collapse: collapse;
@@ -117,6 +120,11 @@ body {
                 }
             }
         }
+    }
+    .image-and-features {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
     }
     .features-benefits {
         @include content-item(1);
@@ -135,6 +143,10 @@ body {
             @include screen-size(mobile) {
                 display: block;
             }
+        }
+        .vuv-features {
+            text-align: left;
+            display: block;
         }
         h2 {
             font-size: $normal;

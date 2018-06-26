@@ -1,0 +1,38 @@
+html
+  head
+    block product-title
+    include ../components/head
+  body
+    include ../components/header
+
+    #wrapper
+      .content
+        .text
+          .description
+            block description
+
+          .information
+            block table
+        .image-and-features
+          .image-slider
+            .control-container
+              .controls
+                i.fas.fa-angle-left
+                i.fas.fa-angle-right
+              .dots
+            .images
+              block image-slider
+          .features-benefits
+            div
+              //- h1 Features &amp Benefits
+              block features-benefits
+
+      
+
+    
+
+    include ../components/footer
+
+  
+
+    

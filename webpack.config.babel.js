@@ -3,7 +3,7 @@ const WebpackOnBuildPlugin = require('on-build-webpack');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const shell = require('shelljs');
 
-const output = process.env['CRYOMETRIX_BUILD'] === 'prod' ? 'build' : 'dist';
+const output = process.env['VISACON_BUILD'] === 'prod' ? 'build' : 'dist';
 
 module.exports = {
   mode: "development",

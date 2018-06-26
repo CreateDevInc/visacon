@@ -4,8 +4,8 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "dev": "export CRYOMETRIX_BUILD=dev; webpack --watch",
-        "build": "export CRYOMETRIX_BUILD=prod; webpack",
+        "dev": "export VISACON_BUILD=dev; webpack --watch",
+        "build": "export VISACON_BUILD=prod; webpack",
         "views": "gulp pug",
         "images": "gulp images",
         "gulp": "gulp",

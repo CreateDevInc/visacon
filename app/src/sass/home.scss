@@ -105,9 +105,14 @@ main {
         }
         img {
             height: 100%;
-            max-height: 280px;
+            max-height: 220px;
             width: auto;
             max-width: 100%;
+        }
+        @media screen and (max-width: $two-column-break) {
+            img {
+                max-height: 264px;
+            }
         }
         p {
             top: 0;

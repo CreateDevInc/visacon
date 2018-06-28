@@ -61,6 +61,17 @@ body {
         }
         .text {
             .description {
+                .vuv-desk-hide {
+                    display: none;
+                }
+                @media screen and (max-width: $break-mobile) {
+                    .vuv-desk-hide {
+                        display: block;
+                        margin: auto;
+                        margin-bottom: 30px;
+                        max-height: 310px;
+                    }
+                }
                 @include content-item();
                 div {
                     display: flex;
@@ -118,6 +129,18 @@ body {
                 tr:nth-child(even) {
                     background-color: $foot-info;
                 }
+            }
+        }
+    }
+    .vuv {
+        @include screen-size(mobile) {
+            display: flex;
+            flex-direction: column-reverse;
+            .image-slider {
+                display: none;
+            }
+            .text {
+                order: 2;
             }
         }
     }
@@ -180,19 +203,6 @@ body {
                 color: $copy-background;
                 font-size: $normal;
             }
-        }
-    }
-    .vuv {
-        width: 530px;
-        float: right;
-        margin-top: -550px;
-    }
-    @media screen and (max-width: $break-mobile) {
-        .vuv {
-            float: none;
-            margin-top: 30px;
-            width: 95%;
-            padding-right: 0px;
         }
     }
     .contact-popup {

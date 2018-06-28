@@ -121,10 +121,13 @@ body {
             }
         }
     }
-    .image-and-features {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
+    #liners-img {
+        height: 327px;
+    }
+    @media only screen and (max-width: 430px) {
+        #liners-img {
+            height: 190px;
+        }
     }
     .features-benefits {
         @include content-item(1);

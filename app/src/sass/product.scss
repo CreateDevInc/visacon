@@ -61,6 +61,17 @@ body {
         }
         .text {
             .description {
+                .vuv-desk-hide {
+                    display: none;
+                }
+                @media screen and (max-width: $break-mobile) {
+                    .vuv-desk-hide {
+                        display: block;
+                        margin: auto;
+                        margin-bottom: 30px;
+                        max-height: 310px;
+                    }
+                }
                 @include content-item();
                 div {
                     display: flex;
@@ -121,10 +132,25 @@ body {
             }
         }
     }
-    .image-and-features {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
+    .vuv {
+        @include screen-size(mobile) {
+            display: flex;
+            flex-direction: column-reverse;
+            .image-slider {
+                display: none;
+            }
+            .text {
+                order: 2;
+            }
+        }
+    }
+    #liners-img {
+        height: 327px;
+    }
+    @media only screen and (max-width: 430px) {
+        #liners-img {
+            height: 190px;
+        }
     }
     .features-benefits {
         @include content-item(1);

@@ -70,6 +70,7 @@ body {
                         margin: auto;
                         margin-bottom: 30px;
                         max-height: 310px;
+                        max-width: 100%;
                     }
                 }
                 @include content-item();

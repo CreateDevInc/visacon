@@ -1,14 +1,14 @@
-const path = require('path');
-const WebpackOnBuildPlugin = require('on-build-webpack');
+const path = require("path");
+const WebpackOnBuildPlugin = require("on-build-webpack");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const shell = require('shelljs');
+const shell = require("shelljs");
 
-const output = process.env['VISACON_BUILD'] === 'prod' ? 'build' : 'dist';
+const output = process.env["VISACON_BUILD"] === "prod" ? "build" : "dist";
 
 module.exports = {
   mode: "development",
   entry: {
-    main: "./app/src/js/index.js",
+    main: "./app/src/js/index.js"
     // styles: "./app/src/sass/styles.scss"
   },
   output: {
@@ -33,10 +33,7 @@ module.exports = {
         // ]
         use: ExtractTextPlugin.extract({
           fallback: "style-loader",
-          use: [
-            { loader: "css-loader"   },
-            { loader: "sass-loader"  }
-          ]
+          use: [{ loader: "css-loader" }, { loader: "sass-loader" }]
         })
       },
       {
@@ -47,16 +44,18 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
-        use: [
-            'file-loader'
-          ]
-       }
+        use: ["file-loader"]
+      }
     ]
   },
   plugins: [
     new WebpackOnBuildPlugin(stats => {
-      shell.exec('npm run gulp');
+      shell.exec("npm run gulp");
     }),
     new ExtractTextPlugin("styles.css")
   ]
 };
+
+console.log("FOLDER FOR OUTPUD:");
+console.log(path.resolve(__dirname, `app/${output}`));
+console.log("-----");

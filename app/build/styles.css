@@ -530,6 +530,15 @@ body .content {
     margin-bottom: 15px;
     margin-left: 2.5%;
     margin-right: 2.5%; }
+    body .content .text .description .vuv-desk-hide {
+      display: none; }
+    @media screen and (max-width: 1080px) {
+      body .content .text .description .vuv-desk-hide {
+        display: block;
+        margin: auto;
+        margin-bottom: 30px;
+        max-height: 310px;
+        max-width: 100%; } }
     body .content .text .description div {
       display: flex;
       justify-content: flex-start; }
@@ -575,10 +584,21 @@ body .content {
   body .content .text .information tr:nth-child(even) {
     background-color: #e6e6e6; }
 
-body .image-and-features {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; }
+@media only screen and (max-width: 1080px) {
+  body .vuv {
+    display: flex;
+    flex-direction: column-reverse; }
+    body .vuv .image-slider {
+      display: none; }
+    body .vuv .text {
+      order: 2; } }
+
+body #liners-img {
+  height: 327px; }
+
+@media only screen and (max-width: 430px) {
+  body #liners-img {
+    height: 190px; } }
 
 body .features-benefits {
   width: 95%;

@@ -27,8 +27,10 @@
     .info {
         position: absolute;
         bottom: 0;
-        left: 0;
+        left: auto;
+        right: 0;
         padding: 0 20px 20px 20px;
+        text-align: right;
         @media screen and (max-width: 770px) {
             display: block;
             float: left;
@@ -52,10 +54,10 @@
     }
     h1 {
         font-size: $huge-headings;
-        padding-right: 10px;
     }
     p {
         font-size: $big-headings;
+        max-width: 500px;
     }
 }
 

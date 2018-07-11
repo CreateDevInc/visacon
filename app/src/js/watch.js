@@ -15,6 +15,7 @@ import '../pug/p-vials.pug';
 import '../pug/p-gas.pug';
 import '../pug/p-silicone.pug';
 import '../pug/p-glass.pug';
+import '../pug/distributor.pug';
 
 import '../pug/components/header.pug';
 import '../pug/templates/product.pug';

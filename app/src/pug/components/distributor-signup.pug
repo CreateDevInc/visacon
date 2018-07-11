@@ -1,0 +1,33 @@
+.contact-form
+   
+    form(action="https://z28up1rg8h.execute-api.us-east-1.amazonaws.com/prod/CryometrixContactHandler", method="POST")
+        label.required #[span Name]
+            input(name="name" type="text", required)
+        label.required #[span Email Address]
+            input(name="email" type="email", required)
+        label.required #[span Phone Number]
+            input(name="phone" type="text", required)
+        label Company
+            input(name="company" type="text")
+        label Company Logo
+            input(name="logo" type="file" accept=".png, .jpg, .jpeg" id="file-submit")
+        label Product to Distribute
+            select(name="product")
+                option(value="select") Select a product.. 
+                option(value="ferrules") GC Ferrules
+                option(value="liners") GC Liners
+                option(value="vials") Vials, Caps, &amp; Inserts
+                option(value="gas") Gas Purification
+                option(value="silicone") Silicone Products
+                option(value="glass") Glass Fabrication
+                option(value="euv") EUV Detector
+                option(value="vuv24") VUV-24 Detector
+                option(value="vuv14") VUV-14 Detector
+                option(value="vuv14d") VUV-14D Detector
+                option(value="vuv-40f") VUV-40F Detector
+                option(value="other") Other
+        label Question / Comment
+            textarea(name="message", cols="30", rows="5")
+        div.g-recaptcha(data-sitekey="6LdZ8VkUAAAAAAOu3yTln3VRZwMeLVf4Vcbpq9UZ")
+
+        button(type="submit") Submit

@@ -24,4 +24,5 @@ import '../pug/components/footer.pug';
 import '../pug/index.pug';
 import '../pug/contact.pug';
 import '../pug/components/contact-component.pug';
+import '../pug/components/distributor-signup.pug';
 import '../pug/thanks.pug';

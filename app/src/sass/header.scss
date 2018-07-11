@@ -16,10 +16,10 @@ header {
             flex-direction: column;
             justify-content: center;
             & {
-                margin-right: $header-footer-margins;
+                margin-right: 8%;
             }
             &:first-child {
-                margin-left: $header-footer-margins;
+                margin-left: 8%;
                 margin-right: 0;
             }
             @include screen-size(sm) {
@@ -187,7 +187,6 @@ nav {
                 color: #fff;
                 text-align: center;
                 background-color: $logo-color;
-                // width: 100%;
                 width: 220px;
                 display: block;
                 margin: auto;
@@ -212,7 +211,7 @@ nav {
             max-height: 500px;
         }
     }
-    @include screen-size(mobile) {
+    @media only screen and (max-width: 1260px) {
         padding: 15px;
         .links {
             display: none !important;

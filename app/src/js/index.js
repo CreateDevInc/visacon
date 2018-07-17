@@ -13,6 +13,8 @@ if (process.env["VISACON_BUILD"] !== "prod") {
   require("./watch");
 }
 
+console.log('Welcome to Visacon.');
+
 import "./product-slider";
 import "../sass/styles.scss";
 import "./switch";

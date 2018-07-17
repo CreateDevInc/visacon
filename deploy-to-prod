@@ -1,0 +1,12 @@
+#!/bin/bash
+
+npm run build
+git add app/build
+git commit -m "newest build committed"
+git push
+
+ssh visacon-prod << EOF
+  cd /var/www/html/visacon
+  sudo git pull
+EOF
+  

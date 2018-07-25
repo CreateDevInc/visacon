@@ -23,7 +23,6 @@
                 color: $logo-color;
                 cursor: pointer;
                 font-size: 40px;
-                margin-right: $arrow-margin;
                 height: 100%;
                 display: flex;
                 flex-direction: column;
@@ -31,7 +30,6 @@
                 padding: 0 20px;
             }
             i:first-child {
-                margin-left: $arrow-margin;
                 margin-right: 0;
             }
         }

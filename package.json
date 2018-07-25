@@ -9,7 +9,7 @@
         "views": "gulp pug",
         "images": "gulp images",
         "gulp": "gulp",
-        "deploy-test": "surge app/dist loutish-regret.surge.sh"
+        "deploy-test": "surge app/build loutish-regret.surge.sh"
     },
     "keywords": [],
     "author": "",

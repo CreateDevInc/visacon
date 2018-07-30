@@ -2,6 +2,7 @@
 // you did in switch.js
 //And you're totally right. This makes code WAY shorter and easier to manage....
 
+console.log("testing the build");
 (function() {
   if (!window.location.href.includes("contact")) {
     //making the variables for the buttons that activate the popup

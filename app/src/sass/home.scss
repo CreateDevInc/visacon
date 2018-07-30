@@ -3,10 +3,21 @@
     width: 100%;
     position: relative;
     background-color: rgb(112, 112, 168);
+
     @media screen and (max-width: 800px) {
-        height: 300px;
+        height: 400px;
         background-image: url('../assets/images/PrivateLabeling1.jpg');
         background-size: cover;
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background-color: rgba(0, 0, 0, 0.35);
+        }
     }
     img {
         width: 100%;
@@ -61,24 +72,31 @@ main {
     $one-column-break: 600px;
     margin: $container-spacing 0;
     @media screen and (max-width: $two-column-break) {
-        max-width: 800px;
         margin: $container-spacing auto;
     }
+
+    .row {
+        display: flex;
+        justify-content: space-around;
+
+        @media screen and (max-width: 850px) {
+            display: block;
+        }
+    }
     a {
-        float: left;
+        // float: left;
         background-color: #e8e8e8;
         text-decoration: none;
+        margin-left: 10px;
+        margin-right: 10px;
         // 4 column layout
         @media screen and (min-width: $four-column-break) {
             width: 23%;
-            margin-left: (100% - $container-width) / 10;
-            margin-right: (100% - $container-width) / 10;
             margin-bottom: $container-spacing;
         }
         // 2 column layout
         @media screen and (max-width: $two-column-break) {
             width: $container-width / 2;
-            margin-left: (100% - $container-width) / 3;
             margin-bottom: $container-spacing;
         }
         // 1 column layout
@@ -89,6 +107,12 @@ main {
             box-sizing: border-box;
             margin: ($container-spacing) auto;
         }
+
+        @media screen and (max-width: 850px) {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         flex: 1;
         display: flex;
         flex-direction: column;
